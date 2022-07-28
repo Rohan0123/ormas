@@ -1,15 +1,28 @@
+
 .container {
-  padding: 0 2rem;
+  opacity: 1;
+  width: 100%;
+}
+
+.background
+{
+  opacity: 0.55;
+  position: absolute;
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
+  min-height: 70vh;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #111;
+}
+
+.main h1 {
+
+  left: 100px;
 }
 
 .footer {
@@ -28,32 +41,76 @@
   flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.banner {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 100%;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.slider
+{
+  border-radius: 20px;
+  opacity: 1;
+  width: 50%;
+  padding-left: 0px;
+  position: relative;
+  margin-left: 5%;
 }
+
 
 .title {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px 0px 0px 50px;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
+  position: relative;
+  width: 30%;
+}
+
+.title a
+{
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0px 20px 5px 20px;
+  background-color: wheat;
+  color: #111;
+  border-radius:60px ;
+  text-decoration: none;
+  font-weight: 400;
+  width: 210px;
+}
+
+.title a:hover
+{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal ;
+  background-color: blue;
+  color: #fafafa;
+  text-decoration: none;
+  transition: 1s;
+  padding: 0px 20px;
+}
+
+.title p
+{
+  margin-top: 30px;
+  margin-left: 5px;
+  font-weight: 400;
+}
+
+.description {
+  font-style: italic;
+  color: #fafafa;
+  margin: 0rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
 }
 
 .title,
 .description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+  text-align: left;
 }
 
 .code {
@@ -66,11 +123,14 @@
 }
 
 .grid {
+  margin-top: -50px;
+  padding-top: 100px ;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  position:absolute;
+  right: 0px;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 650px;
+  margin-left: 10%;
 }
 
 .card {
@@ -82,14 +142,24 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  width: 520px;
+  display: flex;
+  background-color: #000;
+}
+
+#cm
+{
+  background-color: wheat;
+  color: #111;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #111;
+  border-color: gold;
+  background-color: wheat;
+  transition: 1s;
 }
 
 .card h2 {
@@ -116,14 +186,174 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   .card,
   .footer {
     border-color: #222;
   }
+
   .code {
     background: #111;
   }
+
   .logo img {
     filter: invert(1);
   }
 }
+
+.footer h2 {
+  color: #fafafa;
+}
+
+.mainNave
+{
+  width: 100%;
+}
+
+#home
+{
+  color: #000;
+  background-color: wheat;
+}
+.mainNave ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px 20px;
+  margin-top: 20px;
+  background-color: #111;
+  padding: 10px 0px;
+  color: wheat;
+  height: 70px;
+}
+
+.mainNave ul li {
+  font-size: 18px;
+  list-style: none;
+  margin: 2px 0px;
+  font-weight: bold;
+  padding: 10px 40px;
+  border: 1px solid wheat;
+  border-radius: 70px ;
+  background-color: #000;
+  height: 100%;
+}
+
+.mainNave ul li input {
+  border-radius: 4px;
+  border: solid 3px wheat;
+}
+
+.mainNave ul li:hover
+{
+  background-color: wheat;
+  color: #111;
+  border: 1px solid gold;
+  transition: 1s;
+}
+
+.mainNave a
+{
+  margin: 0px 20px;
+}
+.mainNave Image
+{
+  
+  display: flex;
+  justify-content: left;
+  display: none;
+}
+
+.mainLogo
+{ 
+  margin: 0px;
+  background-color: #111;
+  color: wheat;
+  height: 120px;
+  width: 100%;
+}
+
+.mainLogo ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.mainLogo ul div{
+  padding: 0px 200px;
+}
+
+
+#search
+{
+  padding: 0px;
+}
+
+.profile
+{
+  border-radius: 10px;
+  position:absolute;
+  right: 22%;
+  margin-top: -10px;
+}
+
+.pic
+{
+  border-radius: 10px;
+}
+
+.menu h2
+{
+  color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.carousal
+{
+  height: 100px;
+}
+
+.product
+{
+  width: 100%;
+  border: 1px solid wheat;
+  display: flex;
+}
+
+.odisha_logo
+{
+  margin-top: -30px;
+}
+
+.ormas_logo
+{
+  margin-top:30px ;
+  margin-right: 20px;
+}
+
+.kolab_logo
+{
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 70px;
+  height: 75px;
+  display: none;
+}
+.ormas_logo a
+{
+  font-family: 'Times New Roman', Times, serif;
+  padding: 20px 70px;
+  background-color: wheat;
+  color: #111;
+  border: 3px solid black;
+  border-radius:60px ;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 40px;
+  margin-left: -70px;
+}
+
+
