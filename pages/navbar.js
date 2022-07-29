@@ -10,15 +10,15 @@ const Navbar = () => {
       <nav className={styles.mainLogo}>
         <ul>
           <div className={styles.odisha_logo}>
-            <Image src="/odisha_logo.png" width="250px" height="180px" />
+            <Image src="/odisha_logo.png" width="185px" height="140px" />
           </div>
 
           <div className={styles.ormas_logo}>
             <a href="https://nextjs.org">ORMAS</a>
           </div>
 
-          <div>
-            <Image src="/shakti.png" width="150px" height="110px" />
+          <div className={styles.shakti_logo}>
+            <Image src="/shakti.png" width="110px" height="100px" />
           </div>
 
 

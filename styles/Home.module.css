@@ -284,7 +284,7 @@
 }
 
 .mainLogo ul div{
-  padding: 0px 200px;
+  padding: 0px 0px;
 }
 
 
@@ -328,7 +328,7 @@
 
 .odisha_logo
 {
-  margin-top: -30px;
+  margin-top: -10px;
 }
 
 .ormas_logo
@@ -357,6 +357,12 @@
   font-weight: 600;
   font-size: 40px;
   margin-left: -70px;
+  margin: 0px 300px;
+}
+
+.shakti_logo
+{
+  margin-top: 10px;
 }
 
 .page_title

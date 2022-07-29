@@ -19,9 +19,14 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+    min-width: 1560px;
+    
   }
   body {
     color: wheat;
     background: black;
   }
 }
+
+
+
