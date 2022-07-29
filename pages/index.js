@@ -77,7 +77,7 @@ export default function Home() {
           >
             <div className='text'>
             <h2>Shri Ashok K.K. Meena,IAS &rarr;</h2>
-            <p>Principal Secretary, PR & DW Deptt</p>
+            <p>Principal Secretary, PR & DW Dept.</p>
             </div>
             <div className={styles.profile}>
             <Image src="/Ashok.jpg" width="100px" height="100px" className={styles.pic}/>

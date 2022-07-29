@@ -19,7 +19,8 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
-    min-width: 1560px;
+    min-width: 1550px;
+    margin-left: 0px;
     
   }
   body {
