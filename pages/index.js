@@ -17,7 +17,7 @@ export default function Home() {
         <div className={styles.banner}>
 
         <h3 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">ORMAS</a> Koraput
+          Welcome to <a href=" " target="_blank">ORMAS</a> Koraput
         <p className={styles.description}>
           Odisha Rural Developement and Marketing Society
         </p>
@@ -48,13 +48,7 @@ export default function Home() {
                   
               </Carousel>
         </div>
-        </div>
-
-
-
-      
-
-        
+      </div>     
         
         <div className={styles.grid} >
           <a href="https://en.wikipedia.org/wiki/Naveen_Patnaik" className={styles.card}  target="blank" id={styles.cm}>
@@ -94,19 +88,13 @@ export default function Home() {
         </div>
 
         <main className={styles.main}>
-      </main>
-        
-      
-
-        
-
-        
+        </main>
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href=""
           target="_blank"
-          rel="noopener noreferrer"
+          rel="Rohan"
         >
           Powered by {''} 
           <h3>

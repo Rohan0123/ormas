@@ -217,6 +217,7 @@
   color: #000;
   background-color: wheat;
 }
+
 .mainNave ul {
   display: flex;
   flex-direction: row;
@@ -358,4 +359,8 @@
   margin-left: -70px;
 }
 
-
+.page_title
+{
+  display: flex;
+  justify-content: center;
+}
