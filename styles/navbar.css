@@ -1,0 +1,139 @@
+.about {
+  width: 10px;
+}
+
+.li:hover+.cars {
+  display: none;
+  background-color: wheat;
+}
+
+
+.banner {
+  align-items: center;
+  max-width: 100%;
+  background-color: #990229;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+}
+
+.CUOHome_image {
+  max-width: 1100px;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 10px;
+  margin-left: -5%;
+}
+
+.dropdown {
+  background: #111;
+  height: 40px;
+  width: 100%;
+
+}
+
+.dropdown ul {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-self: center;
+  list-style: none;
+  color: #000;
+  height: 100%;
+  border-radius: 20px;
+  border: 1px solid wheat;
+}
+
+.dropdown>ul>li,
+.sub_menu>ul>li {
+
+  margin: 5px 0px;
+  padding: 7px 10px;
+
+}
+
+.dropdown>ul>li>a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 14px;
+
+}
+
+
+.dropdown>ul>li:hover {
+  color: gold;
+  background: gray;
+  border-radius: 2px;
+}
+
+.dropbtn {
+  display: inline-block;
+  color: wheat;
+  text-align: center;
+  padding: 0px 0px;
+  text-decoration: none;
+}
+
+.drp:hover .dropbtn{
+  color: #000;
+}
+
+li.drp {
+  display: inline-block;
+  height: 50%;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-left: -35px;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: 1px solid wheat;
+}
+
+.dropdown-content a {
+  font-size: 14px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.a {
+  margin-left: -12%;
+  height: 5px;
+  margin-top: -12px;
+
+}
+
+
+
+
+.dropdown-content a:hover  {
+  background-color: wheat;
+  color: #000;
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+.drp:hover .dropdown-content {
+  display: block;
+  background-color: #fafafa;
+
+}
+
+
+
+.drp a:hover 
+{
+  color: #000;
+}
+

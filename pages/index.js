@@ -109,9 +109,9 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by {''} 
-          <h2>
+          <h3>
              Rohan
-          </h2>
+          </h3>
         </a>
       </footer>
     </div>
