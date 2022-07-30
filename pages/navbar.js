@@ -29,9 +29,6 @@ const Navbar = () => {
       <nav className={styles.mainNave}>
       <nav  className={styles.home}></nav>
         <ul>
-          <div className={styles.kolab_logo}>
-            <Image src="/Kolab_Logo.jpg" width="65px" height="70px" />
-          </div>
           <Link href={"/"} >
             <a ><li id='home'>Home</li></a>
           </Link>
@@ -78,7 +75,10 @@ const Navbar = () => {
                     <a href="#">Announcement</a>
                     </Link>
                   </div>
-            </li>          
+            </li>   
+            <Link href={"/ecommerce"} className={styles.li}>
+            <a><li>E-commerce</li></a>
+          </Link>       
         </ul>
 
       </nav>
