@@ -371,10 +371,10 @@
   padding: 10px 50px;
   background-color: wheat;
   color: #111;
-  border: 3px solid black;
+  border: 1px solid #000;
   border-radius:60px ;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 40px;
   margin-left: -70px;
   margin: 0px 350px 0px 350px;
