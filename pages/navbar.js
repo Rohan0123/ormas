@@ -76,8 +76,8 @@ const Navbar = () => {
                     </Link>
                   </div>
             </li>   
-            <Link href={"/ecommerce"} className={styles.li}>
-            <a><li>E-commerce</li></a>
+            <Link href={"/estore"} className={styles.li}>
+            <a><li>E-Store</li></a>
           </Link>       
         </ul>
 
