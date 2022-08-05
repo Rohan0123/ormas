@@ -5,8 +5,8 @@ const exhibition = () => {
   return (
     <div className={styles.menu} >
       <h2>Exhibitions:</h2>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
+      <h1 className="text-3xl font-bold object-center">
+      Our Field Works
     </h1>
     </div>
   )

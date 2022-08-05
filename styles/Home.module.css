@@ -1,10 +1,9 @@
-
 .container {
   opacity: 1;
 }
 
-.background
-{
+
+.background {
   opacity: 0.55;
   position: absolute;
 }
@@ -44,11 +43,9 @@
   display: flex;
   margin-top: 20px;
   margin-left: 50px;
-  width: 100%;
 }
 
-.slider
-{
+.slider {
   border-radius: 20px;
   opacity: 1;
   width: 50%;
@@ -62,29 +59,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 50px 0px 0px 50px;
+  margin-left: 50px;
   line-height: 1.15;
   font-size: 3rem;
   position: relative;
   width: 30%;
 }
 
-.title a
-{
+.title a {
   font-family: 'Times New Roman', Times, serif;
   padding: 0px 20px 5px 20px;
   background-color: wheat;
   color: #111;
-  border-radius:60px ;
+  border-radius: 60px;
   text-decoration: none;
   font-weight: 400;
   width: 210px;
 }
 
-.title a:hover
-{
+.title a:hover {
   font-family: 'Times New Roman', Times, serif;
-  font-style: normal ;
+  font-style: normal;
   background-color: blue;
   color: #fafafa;
   text-decoration: none;
@@ -92,8 +87,7 @@
   padding: 0px 20px;
 }
 
-.title p
-{
+.title p {
   margin-top: 30px;
   margin-left: 5px;
   font-weight: 400;
@@ -133,19 +127,18 @@
     padding: 10px 0px;
     display: flex;
     justify-content: center;
-    position:relative;
+    position: relative;
     flex-wrap: wrap;
     width: 500px;
-    margin-left: 1150px;
-    border: 2px solid wheat;
+    margin-left: 1250px;
+    border: 1px solid wheat;
     border-radius: 20px;
   }
 }
 
-@media screen and (min-width: 350px) 
-{
+@media screen and (min-width: 350px) {
   .card {
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1rem;
     text-align: left;
     color: inherit;
     text-decoration: none;
@@ -173,8 +166,7 @@
   background-color: #111;
 }
 
-#cm
-{
+#cm {
   background-color: wheat;
   color: #111;
 }
@@ -230,16 +222,29 @@
 .footer h3 {
   color: #fafafa;
   padding: 3px 0px 0px 5px;
-  font-family:'Times New Roman', Times, serif ;
+  font-family: 'Times New Roman', Times, serif;
 }
 
-.mainNave
-{
+.mainNave {
   width: 100%;
 }
 
-#home
-{
+#cart {
+  margin-top: -50px;
+  font-size: xx-large;
+  margin-left: 1450px;
+  border: 0px;
+}
+
+@media screen and (min-width: 1500px) {
+  #cart {
+    position: absolute;
+    margin-left: 1740px;
+
+  }
+}
+
+#home {
   color: #000;
   background-color: wheat;
 }
@@ -263,7 +268,7 @@
   font-weight: bold;
   padding: 10px 40px;
   border: 1px solid wheat;
-  border-radius: 70px ;
+  border-radius: 70px;
   background-color: #000;
   height: 100%;
 }
@@ -273,28 +278,25 @@
   border: solid 3px wheat;
 }
 
-.mainNave ul li:hover
-{
+.mainNave ul li:hover {
   background-color: wheat;
   color: #111;
   border: 1px solid gold;
   transition: 1s;
 }
 
-.mainNave a
-{
+.mainNave a {
   margin: 0px 20px;
 }
-.mainNave Image
-{
-  
+
+.mainNave Image {
+
   display: flex;
   justify-content: left;
   display: none;
 }
 
-.mainLogo
-{ 
+.mainLogo {
   margin: 0px;
   background-color: #111;
   color: wheat;
@@ -302,77 +304,89 @@
   width: 100%;
 }
 
-.mainLogo ul{
+.mainLogo ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-left: -40px;
 
 }
 
-.mainLogo ul div{
+.mainLogo ul div {
   padding: 0px 0px;
 }
 
 
-#search
-{
+#search {
   padding: 0px;
 }
 
-.profile
-{
+.profile {
   border-radius: 10px;
-  position:absolute;
+  position: absolute;
   margin-left: 270px;
   width: 85px;
   margin-top: -11px;
 
 }
 
-.pic
-{
+.pic {
   border-radius: 10px;
 }
 
-.menu h2
-{
-  color: #fafafa;
+.menu {
+  background-color: #111;
+
+}
+
+.menu h2 {
+  color: wheat;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  font-size: x-large;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 15px 0px;
+  margin-bottom: 10px;
+  background-color: #000;
 }
 
-.carousal
-{
+.menu h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.carousal {
   height: 100px;
 }
 
-.product
-{
+.product {
   width: 100%;
-  border: 1px solid wheat;
+  border: 0px solid wheat;
   display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  background-color: #111;
 }
 
-.odisha_logo
-{
+.odisha_logo {
   margin-top: -10px;
 }
 
-.ormas_logo
-{
-  margin-top:35px ;
+.ormas_logo {
+  margin-top: 35px;
   margin-right: 20px;
 }
 
-.ormas_logo a
-{
+.ormas_logo a {
   font-family: 'Times New Roman', Times, serif;
   padding: 10px 50px;
   background-color: wheat;
   color: #111;
   border: 1px solid #000;
-  border-radius:60px ;
+  border-radius: 60px;
   text-decoration: none;
   font-weight: 500;
   font-size: 40px;
@@ -380,13 +394,67 @@
   margin: 0px 350px 0px 350px;
 }
 
-.shakti_logo
-{
+.shakti_logo {
   margin-top: 10px;
 }
 
-.page_title
-{
+.page_title {
   display: flex;
   justify-content: center;
+}
+
+#estore_border {
+  border: 1px solid wheat;
+  border-radius: 20px;
+  background-color: #111;
+}
+
+#estore_border:hover {
+  background-color: wheat;
+  color: #000;
+  transition: 1s;
+}
+
+@media screen and (min-width: 780px) {
+  #estore_border {
+    margin: 5px 10px;
+  }
+}
+
+#estore_border:hover h2 {
+  color: #000;
+}
+
+#sidebar {
+  border: 1px solid wheat;
+  border-radius: 10px;
+  font-weight: 800;
+  z-index: 1;
+  margin-left: 1270px;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#sidebar:hover {
+  background-color: wheat;
+  color: #000;
+  font-weight: 700;
+  transition: 1s;
+}
+
+@media screen and (min-width: 1500px) {
+  #sidebar {
+    position: absolute;
+  }
+}
+
+#history {
+  background-color: #111;
+}
+
+#product_details {
+  width: 100%;
+  background-color: #111;
 }

@@ -137,3 +137,16 @@ li.drp {
   color: #000;
 }
 
+.cart_buttons
+{
+  margin: 0px 8px;
+  font-size: 20px;
+}
+
+.sidebar
+{
+  min-width: 250px;
+  position: relative;
+  margin-left: 700px;
+}
+

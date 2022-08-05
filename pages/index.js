@@ -27,7 +27,7 @@ export default function Home() {
         <div className={styles.slider}>
               <Carousel >
                   <div >
-                      <img src="/Jaggery.jpeg" alt="image1"/>
+                      <img src="/Tamarind.jpeg" alt="image1"/>
                       <p className="legend">ORMAS Product</p>
   
                   </div>
@@ -42,7 +42,7 @@ export default function Home() {
   
                   </div>
                   <div>
-                      <img src="/Tamarind.jpeg" alt="image4"/>
+                      <img src="/Kala Jeera Rice.jpeg" alt="image4"/>
                       
   
                   </div>
@@ -89,6 +89,7 @@ export default function Home() {
         </div>
 
         <main className={styles.main}>
+            
         </main>
 
       <footer className={styles.footer}>
@@ -98,7 +99,7 @@ export default function Home() {
           rel="Rohan"
         >
           Powered by {''} 
-          <h3 className='bg-slate-100'>
+          <h3>
              Rohan
           </h3>
         </a>
