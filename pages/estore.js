@@ -6,8 +6,8 @@ import Link from "next/link";
 //import Image from 'next/image'
 const ecommerce = () => {
   return (
-    <div>
-      <div className={styles.page_title}>
+    <div >
+      <div className='absolute top-0 md:relative' >
       </div>
       <section class="text-gray-400 bg-black body-font">
   <div class="container px-5 py-24 mx-auto ">

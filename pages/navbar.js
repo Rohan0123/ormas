@@ -2,7 +2,8 @@ import React from 'react'
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Image from 'next/image'
-import { AiFillCloseCircle, AiOutlineShoppingCart, AiOutlinePlusCircle, AiOutlineMinusCircle } from "react-icons/ai"
+import { AiFillCloseCircle, AiOutlineShoppingCart, AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai"
+import {BsFillBagCheckFill} from "react-icons/Bs"
 import { useRef } from 'react';
 
 const Navbar = () => {
@@ -99,7 +100,7 @@ const Navbar = () => {
         </ul>
           <div onClick={toggleCart} className='hover:cursor-pointer'><AiOutlineShoppingCart id={styles.cart}/></div>
 
-        <div ref={ref} className="sideCart top-48 right-0  font-black text-orange-100 bg-black py-10 px-5  transition-transform duration-1000 translate-x-full w-72 h-96" id={styles.sidebar}>
+        <div ref={ref} className="sideCart top-48 right-0  font-black text-orange-100 bg-black py-10 px-5  transition-transform duration-1000 translate-x-full w-72 " id={styles.sidebar}>
         <h2 className='text-center font-serif text-lg'>Shopping cart</h2>
         <div>
         <span  className='absolute top-0 right-3 cursor-pointer '>
@@ -114,11 +115,13 @@ const Navbar = () => {
               Lemon Grass Oil
               </div>
               <div className='flex items-center justify-center w-1/3 font-semibold '>
-              <AiOutlineMinusCircle className='cart_buttons text-xl'/>1<AiOutlinePlusCircle className='cart_buttons text-xl'/>
+              <AiFillMinusCircle className='cart_buttons text-xl'/>1<AiFillPlusCircle className='cart_buttons text-xl'/>
               </div>
             </div>
           </li>
         </ol>
+        
+        <button class="flex mx-10 my-3 mt-16 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none hover:bg-orange-100 rounded-lg font-semibold absolute bottom-0" id={styles.checkout_button}><BsFillBagCheckFill className='my-1 mx-2 '/> Checkout</button>
         </div>
       </div>
       </nav>
