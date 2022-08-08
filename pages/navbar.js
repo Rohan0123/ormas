@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from 'next/image'
 import { AiFillCloseCircle, AiOutlineShoppingCart, AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai"
 import {BsFillBagCheckFill} from "react-icons/Bs"
-import {MdDeleteForever} from "react-icons/Md"
+import {MdDeleteForever, MdAccountCircle} from "react-icons/Md"
 import { useRef } from 'react';
 
 const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
@@ -99,7 +99,13 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
             <a><li>E-Store</li></a>
           </Link>
         </ul>
+          
+
           <div onClick={toggleCart} className='hover:cursor-pointer'><AiOutlineShoppingCart id={styles.cart}/></div>
+          
+          <Link href={"./login"}>
+          <div onClick={0} className='hover:cursor-pointer'><MdAccountCircle id={styles.account}/></div>
+          </Link>
 
         <div ref={ref} className="sideCart top-48 right-0  font-black text-orange-100 bg-black py-10 px-5  transition-transform duration-1000 translate-x-full w-80 " id={styles.sidebar}>
         <h2 className='text-center font-serif text-lg'>Shopping cart</h2>

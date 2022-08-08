@@ -236,18 +236,33 @@
   border: 0px;
 }
 
+
 @media screen and (max-width: 450px) {
   #cart {
-    margin-top: -60px;
-    font-size: xx-large;
-    margin-left: 1400px;
+    margin-top: -55px;
+    font-size: 40px;
+    margin-left: 1430px;
     border: 0px;
   }
+  #account {
+  margin-top: -40px;
+  font-size: 40px;
+  margin-left: 1360px;
+  border: 0px;
+}
 }
 @media screen and (min-width: 1500px) {
   #cart {
     position: absolute;
+    margin-left: 1830px;
+    
+  }
+  #account {
+    position: absolute;
     margin-left: 1730px;
+    font-size: 30px;
+    margin-top: -50px;
+    
 
   }
 }
@@ -286,7 +301,7 @@
 
 @media screen and (max-width: 480px) {
   .mainNave ul li {
-    margin-top: -10px;
+    margin-top: 0px;
   }
 }
 
@@ -483,8 +498,8 @@
 
 #checkout_button:hover
 {
-  background-color: #111;
-  color: wheat;
+  background-color: wheat;
+  color: black;
   transition: 1s;
 }
 
@@ -533,4 +548,24 @@
   margin: auto;
 
 }
+}
+
+#login
+{
+  width: 100%;
+  margin-top: 0px;
+  border: 1px solid wheat;
+  border-radius: 100px;
+}
+
+#login_ormas_logo
+{
+  background-color: wheat;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 2px 5px;
+  border-radius: 30px;
+  font-size: 30px;
+  font-weight: 500;
 }

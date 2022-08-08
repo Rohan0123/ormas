@@ -28,9 +28,11 @@ const order = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
                                 <span class="ml-auto text-white">50ml</span>
                                 <span class="ml-auto text-white">6</span>
                             </div>
-                            <div class="flex">
-                                <span class="title-font font-medium text-2xl text-orange-200">₹{subTotal}</span>
-                                <button class="flex ml-auto text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded font-semibold">Track order</button>
+                            <div class="flex flex-col">
+                                <div class="title-font font-medium text-2xl text-orange-200">SubTotal: ₹{subTotal}</div>
+                                <div>
+                                <button class="flex mt-5 text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded font-semibold">Track order</button>
+                                </div>
                                 
                             </div>
                         </div>
