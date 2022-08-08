@@ -291,6 +291,7 @@
 }
 
 
+
 .mainNave ul li:hover {
   background-color: wheat;
   color: #111;
@@ -309,7 +310,7 @@
   display: none;
 }
 
-.mainLogo {
+#mainLogo {
   margin: 0px;
   background-color: #111;
   color: wheat;
@@ -317,7 +318,7 @@
   width: 100%;
 }
 
-.mainLogo ul {
+#mainLogo ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -325,7 +326,7 @@
 
 }
 
-.mainLogo ul div {
+#mainLogo ul div {
   padding: 0px 0px;
 }
 
@@ -522,4 +523,14 @@
 #checkout_title
 {
   margin: 0px 0px;
+}
+
+@media screen and (max-width:450px) {
+  #order
+  {
+  width: 50%;
+  display: flex;
+  margin: auto;
+
+}
 }

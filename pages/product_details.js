@@ -98,7 +98,7 @@ const Post = ({addToCart}) => {
                 <div class="flex">
                   <span class="title-font font-medium text-2xl text-white">₹120.00</span>
                   <Link href={"./checkout"}>
-                  <button class="flex ml-auto text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded">Buy Now</button>
+                  <button onClick={()=>{addToCart(slug, 1, 120, "Lemon Grass Oil", "250ml","Oil")}}  class="flex ml-auto text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded">Buy Now</button>
                   </Link>
                   <button onClick={()=>{addToCart(slug, 1, 120, "Lemon Grass Oil", "250ml","Oil")}} className='hover:cursor-pointer text-3xl mx-5'><AiOutlineShoppingCart /></button>
                   <button class="rounded-full w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">

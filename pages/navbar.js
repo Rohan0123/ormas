@@ -26,7 +26,7 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
   }
   return (
     <div >
-      <nav className={styles.mainLogo} >
+      <nav id={styles.mainLogo} >
         <ul>
           <div className={styles.odisha_logo}>
             <Image src="/odisha_logo.png" width="185px" height="140px" />
@@ -45,7 +45,7 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
 
       </nav>
 
-      <nav className={styles.mainNave} >
+      <nav id={styles.maiNave} className={styles.mainNave} >
         <nav className={styles.home} ></nav>
         <ul>
           <Link href={"/"} >
@@ -124,6 +124,7 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
           </li>})}
         </ol>
         
+        <h2 className="absolute bottom-32 ml-20 font-bold">SubTotal: ₹{subTotal}</h2>
         <Link href={"./checkout"}>
         <button class="flex mx-14 my-3 mt-16 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none hover:bg-orange-100 rounded-lg font-semibold absolute bottom-0 mb-16" id={styles.checkout_button}><BsFillBagCheckFill className='my-1 mx-2 '/> Checkout</button>
         </Link>
