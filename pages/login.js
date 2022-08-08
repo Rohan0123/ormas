@@ -22,14 +22,16 @@ const login = () => {
                                             <form>
                                                 <p className="mb-4 text-gray-300">Please login to your account</p>
                                                 <div className="mb-4">
+                                                    <h3 className='text-orange-200'>Name:</h3>
                                                     <input
                                                         type="text"
                                                         className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                                         id="exampleFormControlInput1"
-                                                        placeholder="Username"
+                                                        placeholder="E-mail"
                                                     />
                                                 </div>
                                                 <div className="mb-4">
+                                                <h3 className='text-orange-200'>Password:</h3>
                                                     <input
                                                         type="password"
                                                         className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
@@ -47,14 +49,14 @@ const login = () => {
                                                     >
                                                         Log in
                                                     </button>
-                                                    <a className="text-gray-400" href="#!">Forgot password?</a>
+                                                    <Link href="/forget"><p className="text-gray-300 hover:cursor-pointer hover:text-orange-200">Forgot password?</p></Link>
                                                 </div>
                                                 <div className="flex items-center justify-between pb-6">
                                                     <p className="mb-0 mr-2 text-orange-200">Don't have an account?</p>
                                                     <Link href="./signup">
                                                     <button
                                                         type="button"
-                                                        className="inline-block px-6 py-2 border-2 border-orange-100 text-orange-200 hover:bg-orange-200 hover:text-black font-medium text-xs leading-tight uppercase rounded  focus:outline-none focus:ring-0 transition duration-1000 ease-in-out"
+                                                        className="inline-block px-6 py-2 border-2 border-orange-100 text-orange-200 hover:bg-orange-100 hover:text-black font-medium text-xs leading-tight uppercase rounded  focus:outline-none focus:ring-0 transition duration-1000 ease-in-out"
                                                        
                                                     >
                                                         Create One
@@ -71,7 +73,7 @@ const login = () => {
                                         <div className="text-orange-200 px-4 py-6 md:p-12 md:mx-6">
                                             <h4 className="text-xl font-semibold mb-6">We are more than just a company</h4>
                                             <p className="text-sm">
-                                                Thanks for choosing ORMAS. We provide the organic and genuinely chemicals free foods.
+                                                Thanks for choosing ORMAS. We provide the organic and genuinely chemical free foods.
                                             </p>
                                         </div>
                                     </div>

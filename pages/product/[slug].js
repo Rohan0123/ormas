@@ -34,7 +34,7 @@ const Post = () => {
               <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-xl" src="/Lemon_Grass_Oil.jpeg"/>
               <div class="lg:w-1/2 lg:pl-10 lg:py-6 mt-6 lg:mt-0 " >
                 <h2 class="text-sm title-font text-gray-500 tracking-widest">ORMAS</h2>
-                <h1 class="text-white text-3xl title-font font-medium mb-1">{slug}</h1>
+                <h1 class="text-white text-3xl title-font font-medium mb-1">Lemon Grass Oil</h1>
                 <div class="flex mb-4">
                   <span class="flex items-center">
                     <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24">
