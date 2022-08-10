@@ -112,16 +112,15 @@
   width: 550px;
 }
 
-.description {
+#description {
   font-style: italic;
   color: #fafafa;
-  margin: 0rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
 }
 
 .title,
-.description {
+#description {
   text-align: left;
 }
 
@@ -624,4 +623,23 @@
 
 #map{
   margin-top: -40px;
+}
+
+#estore{
+  background-color: wheat;
+  color: #000;
+
+}
+
+.home_row
+{
+    width: 100%;
+    display: flex;
+    margin-left: 5px;
+    margin-right:5px;
+}
+
+#product_carousel
+{
+  background-color: #111;
 }

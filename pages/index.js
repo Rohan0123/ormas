@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -17,91 +18,172 @@ export default function Home() {
 
       <div className={styles.banner}>
 
-        <div className='mt-2'>
+        <div className='mt-4'>
           <div id={styles.welcome}>
-        <h3 className={styles.title}>
-          Welcome to <a href=" " target="_blank">ORMAS</a> <h3 className='ml-2'>Koraput</h3>
-          <p className={styles.description}>
-            Odisha Rural Developement and Marketing Society
-          </p>
-        </h3>
-        </div>
+            <h3 className={styles.title}>
+              Welcome to <a href=" " target="_blank">ORMAS</a> <p className='ml-2 mt-0'>Koraput</p>
+              <p className='mt-0 text-2xl text-white italic' >
+                Odisha Rural Developement and Marketing Society
+              </p>
+            </h3>
+          </div>
 
-        <div className={styles.grid} >
-          <a href="https://en.wikipedia.org/wiki/Naveen_Patnaik" className={styles.card} target="blank" id={styles.cm}>
-            <div className='text'>
-              <h2 className='font-semibold'>Shri Abdaal M. Akhtar, IAS &rarr;</h2>
-              <p>Collector & District Magistrate</p>
-            </div>
-            <div className={styles.profile}>
-              <Image src="/collector.jpg" width="100px" height="100px" className={styles.pic} />
-            </div>
-          </a>
+          <div className={styles.grid} >
+            <a href="https://twitter.com/abdaal?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" className={styles.card} target="blank" id={styles.cm}>
+              <div className='text'>
+                <h2 className='font-semibold'>Shri Abdaal M. Akhtar, IAS &rarr;</h2>
+                <p>Collector & District Magistrate</p>
+              </div>
+              <div className={styles.profile}>
+                <Image src="/collector.jpg" width="100px" height="100px" className={styles.pic} />
+              </div>
+            </a>
 
-          <a href="https://en.wikipedia.org/wiki/Pradip_Kumar_Amat" className={styles.card} target="blank">
-            <div className='text'>
-              <h2>Shri Pradip Kumar Amat, &rarr;</h2>
-              <p>Honorable Minister, PR & DW Dept.</p>
-            </div>
-            <div className={styles.profile}>
-              <Image src="/Pradip.jpg" width="100px" height="100px" className={styles.pic} />
-            </div>
-          </a>
+            <a href="" className={styles.card} target="blank">
+              <div>
+                <h2 className='font-semibold'>Shri Rajendra Majhi, OAS&rarr;</h2>
+                <p>CDO-CUM-E.O, Zilla Parisad Koraput.</p>
+              </div>
+              <div className={styles.profile}>
+                <Image src="/" width="100px" height="100px" className={styles.pic} />
+              </div>
+            </a>
 
-          <a
-            href="https://twitter.com/ormas_odisha/status/1438188931120447495?s=20&t=WAui2ikCFugBBO9h-WFz6Q"
-            className={styles.card} target="blank"
-          >
-            <div className='text'>
-              <h2>Shri Ashok K.K. Meena,IAS &rarr;</h2>
-              <p>Principal Secretary, PR & DW Dept.</p>
-            </div>
-            <div className={styles.profile}>
-              <Image src="/Ashok.jpg" width="100px" height="100px" className={styles.pic} />
-            </div>
-          </a>
+            <a href="" className={styles.card} target="blank">
+              <div >
+                <h2 className='font-semibold'>Shri Roshan Kumar Karthik, &rarr;</h2>
+                <p>Deputy CEO, ORMAS Koraput.</p>
+              </div>
+              <div className={styles.profile}>
+                <Image src="/Roshan.jpg" width="100px" height="100px" className={styles.pic} />
+              </div>
+            </a>
 
-        </div>
+
+
+          </div>
 
 
 
         </div>
 
         <div className={styles.slider}>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img id={styles.slider_image} class="d-block w-100" src="Workers.jpeg" alt="First slide"/>
-    </div>
-    <div class="carousel-item">
-      <img id={styles.slider_image} class="d-block w-100" src="Workers.jpeg" alt="Second slide"/>
-    </div>
-    <div class="carousel-item">
-      <img id={styles.slider_image} class="d-block w-100" src="Workers.jpeg" alt="Third slide"/>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img id={styles.slider_image} class="d-block w-100" src="Workers.jpeg" alt="First slide" />
+              </div>
+              <div class="carousel-item">
+                <img id={styles.slider_image} class="d-block w-100" src="Worker.jpeg" alt="Second slide" />
+              </div>
+              <div class="carousel-item">
+                <img id={styles.slider_image} class="d-block w-100" src="Workers.jpeg" alt="Third slide" />
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
       </div>
 
-        <h2 className='flex flex-row justify-center mt-24 font-serif text-2xl font-semibold '>Our Store Location</h2>
-      <div className='flex flex-row justify-center mt-10 ' id="second">
-        <iframe className='rounded-lg' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15108.555810503763!2d82.7193501!3d18.7919599!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe41a46200b702ecf!2sKoraput%20Junction!5e0!3m2!1sen!2sin!4v1660069891134!5m2!1sen!2sin" width="1500" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
+      <div id={styles.product_carousel}>
+        <Carousel className='rounded-lg my-10' >
+          <div className='flex mt-12 rounded-lg'>
+            <div class="lg:w-1/5 md:w-1/2 p-4  m-auto w-650 hover:text-black" id={styles.estore_border}>
+              <Link href="/product_details_Lemon">
+                <a class="block relative h-55 overflow-hidden rounded-lg" >
+                  <img alt="ecommerce" class="m-auto block" src="/Lemon_Grass_Oil.jpeg" />
 
-        
+                  <div class="mt-5 text-center md:text-left">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-white title-font text-lg font-medium ">Lemon Grass Oil</h2>
+                    <p class="mt-1">₹100.00</p>
+                  </div>
+                </a>
+              </Link>
+            </div>
+            <div class="lg:w-1/5 md:w-1/2 p-4 m-auto" id={styles.estore_border}>
+              <Link href="/Turmeric">
+                <a class="block relative h-55 rounded-lg overflow-hidden" href='/product_details'>
+                  <img alt="ecommerce" class="object-cover object-center w-full block" src="Turmeric.jpeg" />
+                  <div class="mt-4 text-center md:text-left">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-white title-font text-lg font-medium">Turmeric Powder</h2>
+                    <p class="mt-1">₹150</p>
+                  </div>
+                </a>
+              </Link>
+            </div>
+            <div class="lg:w-1/5 md:w-1/2 p-4 m-auto" id={styles.estore_border}>
+              <Link href="/Rice">
+                <a class="block relative h-55 rounded-lg overflow-hidden" href='/product_details'>
+                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/Kala Jeera Rice.jpeg" />
+                  <div class="mt-4 text-center md:text-left">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-white title-font text-lg font-medium">Kala Jeera Rice</h2>
+                    <p class="mt-1">₹110.00</p>
+                  </div>
+                </a>
+              </Link>
+            </div>
+            <div class="lg:w-1/5 md:w-1/2 p-4 m-auto" id={styles.estore_border}>
+              <Link href="/Suan">
+                <a class="block relative h-55 rounded-lg overflow-hidden" href='/product_details'>
+                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/Suan.jpeg" />
+                  <div class="mt-4 text-center md:text-left">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-white title-font text-lg font-medium">Suan</h2>
+                    <p class="mt-1">₹80</p>
+                  </div>
+                </a>
+              </Link>
+            </div>
+            </div>
+            <div className='flex mt-24 rounded-lg'>
+            <div class="lg:w-1/5 md:w-1/2 p-4 m-auto" id={styles.estore_border}>
+              <Link href="/Jaggery">
+                <a class="block relative h-55 rounded-lg overflow-hidden" href='/product_details'>
+                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/Jaggery.jpeg" />
+                  <div class="mt-4 text-center md:text-left">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-white title-font text-lg font-medium">Jaggery</h2>
+                    <p class="mt-1">₹100.00</p>
+                  </div>
+                </a>
+              </Link>
+            </div>
+            <div class="lg:w-1/5 md:w-1/2 p-4 m-auto" id={styles.estore_border}>
+              <Link href="/Tamarind">
+                <a class="block relative h-55 rounded-lg overflow-hidden" href='/product_details'>
+                  <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="/Tamarind.jpeg" />
+                  <div class="mt-4 text-center md:text-left">
+                    <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                    <h2 class="text-white title-font text-lg font-medium">Tamarind</h2>
+                    <p class="mt-1">₹100.00</p>
+                  </div>
+                </a>
+              </Link>
+            </div>
+          </div>
+        </Carousel>
+      </div>
+
+      <h2 className='flex flex-row justify-center mt-24 font-serif text-2xl font-semibold '>Our Store Location</h2>
+      <div className='flex flex-row justify-center mt-10 ' id="second">
+        <iframe className='rounded-lg' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15108.555810503763!2d82.7193501!3d18.7919599!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe41a46200b702ecf!2sKoraput%20Junction!5e0!3m2!1sen!2sin!4v1660069891134!5m2!1sen!2sin" width="1500" height="450" />
+
+
       </div>
 
       <main className={styles.main}>

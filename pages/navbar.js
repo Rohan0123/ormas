@@ -95,17 +95,18 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
               </Link>
             </div>
           </li>
-          <Link href={"/estore"} className={styles.li}>
-            <a><li>E-Store</li></a>
+          <Link href={"/estore"} >
+            <a ><li id={styles.estore} >E-Store</li></a>
           </Link>
         </ul>
           
 
-          <div onClick={toggleCart} className='hover:cursor-pointer'><AiOutlineShoppingCart id={styles.cart}/></div>
+          <div onClick={toggleCart} className='hover:cursor-pointer' ><AiOutlineShoppingCart id={styles.cart}/></div>
           
           <Link href={"./login"}>
-          <div onClick={0} className='hover:cursor-pointer'><MdAccountCircle id={styles.account}/></div>
+          <div onClick={0} className='hover:cursor-pointer'><MdAccountCircle id={styles.account}/><h2 className='absolute top-40 right-7'>{Object.keys(cart).length}</h2></div>
           </Link>
+
 
         <div ref={ref} className="sideCart top-48 right-0  font-black text-orange-100 bg-black py-10 px-5  transition-transform duration-1000 translate-x-full w-80 " id={styles.sidebar}>
         <h2 className='text-center font-serif text-lg'>Shopping cart</h2>

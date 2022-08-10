@@ -129,7 +129,9 @@ const checkout = ({ cart, addToCart, removeFromCart, subTotal }) => {
         </div>
       </div>
 
-      <button type='submit' onClick={intiatePayment} className="flex my-5 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none  rounded-lg font-semibold " id={styles.checkout_button}>Pay ₹{subTotal}</button>
+      <Link href={"/online_payment"}>
+      <button className="flex my-5 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none  rounded-lg font-semibold " id={styles.checkout_button}>Pay ₹{subTotal}</button>
+      </Link>
 
     </div>
   </>

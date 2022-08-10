@@ -24,6 +24,7 @@ const Post = ({addToCart}) => {
     setPin(e.target.value)
   }
 
+  
 
   return <>
     <div id={styles.product_details} className="bg-white">
@@ -31,10 +32,10 @@ const Post = ({addToCart}) => {
         <section class="text-gray-400 bg-black body-font overflow-hidden" id={styles.details}>
           <div class="container px-5 py-16 mx-auto">
             <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-xl" src="/Lemon_Grass_Oil.jpeg" />
+              <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-xl" src="/Turmeric.jpeg" />
               <div class="lg:w-1/2 lg:pl-10 lg:py-6 mt-6 lg:mt-0 " >
                 <h2 class="text-sm title-font text-gray-500 tracking-widest">ORMAS</h2>
-                <h1 class="text-white text-3xl title-font font-medium mb-1">Lemon Grass Oil</h1>
+                <h1 class="text-white text-3xl title-font font-medium mb-1">Turmeric</h1>
                 <div class="flex mb-4">
                   <span class="flex items-center">
                     <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-yellow-400" viewBox="0 0 24 24">
@@ -72,7 +73,7 @@ const Post = ({addToCart}) => {
                     </a>
                   </span>
                 </div>
-                <p class="leading-relaxed">Lemon Grass Oil is the base of every India dish for ots rich colour and flavour. It also has known antiseptic and antibacterial properties. Koraput's fistinct soil and topography suport high-end turmeric rhizomes richin curcumin that gives it a vibrant hue. The best cultivars of turmeric have been preserved and passed down through tribal lore for centuries in this corner of Odisha. Farmer's Collective supported by ORMAS brings home this authentic and organic produce of the Eastern Ghats to your homes.</p>
+                <p class="leading-relaxed">Turmeric is the base of every India dish for ots rich colour and flavour. It also has known antiseptic and antibacterial properties. Koraput's fistinct soil and topography suport high-end turmeric rhizomes richin curcumin that gives it a vibrant hue. The best cultivars of turmeric have been preserved and passed down through tribal lore for centuries in this corner of Odisha. Farmer's Collective supported by ORMAS brings home this authentic and organic produce of the Eastern Ghats to your homes.</p>
                 <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5">
                   <div class="flex">
                     <span class="mr-3">Color</span>
@@ -84,9 +85,9 @@ const Post = ({addToCart}) => {
                     <span class="mr-3">Size</span>
                     <div class="relative">
                       <select class="rounded border border-gray-700 focus:ring-2 focus:ring-yellow-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-yellow-500 text-orange-200 pl-3 pr-10">
-                        <option className='bg-black hover:bg-orange-200 hover:text-black'>50ml</option>
-                        <option className='bg-black hover:bg-orange-200 hover:text-black'>100ml</option>
-                        <option className='bg-black hover:bg-orange-200 hover:text-black'>250ml</option>
+                      <option className='bg-black hover:bg-orange-200 hover:text-black'>250gm</option>
+                        <option className='bg-black hover:bg-orange-200 hover:text-black'>500gm</option>
+                        <option className='bg-black hover:bg-orange-200 hover:text-black'>1000gm</option>
                       </select>
                       <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
@@ -99,9 +100,9 @@ const Post = ({addToCart}) => {
                 <div class="flex">
                   <span class="title-font font-medium text-2xl text-white">₹120.00</span>
                   <Link href={"./checkout"}>
-                  <button onClick={()=>{addToCart(slug, 1, 120, "Lemon Grass Oil", "250ml","Oil")}}  class="flex ml-auto text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded">Buy Now</button>
+                  <button onClick={()=>{addToCart(2, 1, 120, "Turmeric", "250gm","Turmeric")}}  class="flex ml-auto text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded">Buy Now</button>
                   </Link>
-                  <button onClick={()=>{addToCart(slug, 1, 120, "Lemon Grass Oil", "250ml","Oil")}} className='hover:cursor-pointer text-3xl mx-5'><AiOutlineShoppingCart /></button>
+                  <button onClick={()=>{addToCart(2, 1, 120, "Turmeric", "250gm","Turmeric")}} className='hover:cursor-pointer hover:text-orange-200 text-3xl mx-5'><AiOutlineShoppingCart /></button>
                   <button class="rounded-full w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                     <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                       <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
@@ -133,7 +134,7 @@ const Post = ({addToCart}) => {
           <div class="container px-5 py-24 mx-auto">
             <div class="text-center mb-20">
               <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">Product Features</h1>
-              <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-400 text-opacity-80">Lemon grass oil is the base of every India dish for ots rich colour and flavour. It also has known antiseptic and antibacterial properties.</p>
+              <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-400 text-opacity-80">Turmeric is the base of every India dish for ots rich colour and flavour. It also has known antiseptic and antibacterial properties.</p>
               <div class="flex mt-6 justify-center">
                 <div class="w-16 h-1 rounded-full bg-yellow-500 inline-flex"></div>
               </div>
@@ -147,7 +148,7 @@ const Post = ({addToCart}) => {
                 </div>
                 <div class="flex-grow">
                   <h2 class="text-white text-lg title-font font-medium mb-3">100% Pure</h2>
-                  <p class="leading-relaxed text-base">Lemon grass oil is the base of every India dish for ots rich colour and flavour. It also has known antiseptic and antibacterial properties.</p>
+                  <p class="leading-relaxed text-base">Turmeric is the base of every India dish for ots rich colour and flavour. It also has known antiseptic and antibacterial properties.</p>
                   <a class="mt-3 text-yellow-400 inline-flex items-center">Learn More
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                       <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -165,7 +166,7 @@ const Post = ({addToCart}) => {
                 </div>
                 <div class="flex-grow">
                   <h2 class="text-white text-lg title-font font-medium mb-3">Chemical Free</h2>
-                  <p class="leading-relaxed text-base">Lemon grass oil is the base of every India dish for ots rich colour and flavour. It also has known antiseptic and antibacterial properties.</p>
+                  <p class="leading-relaxed text-base">Turmeric is the base of every India dish for ots rich colour and flavour. It also has known antiseptic and antibacterial properties.</p>
                   <a class="mt-3 text-yellow-400 inline-flex items-center">Learn More
                     <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                       <path d="M5 12h14M12 5l7 7-7 7"></path>
