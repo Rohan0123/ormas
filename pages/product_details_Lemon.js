@@ -76,7 +76,7 @@ const Post = ({addToCart}) => {
                 <p class="leading-relaxed">Lemon Grass Oil is the base of every India dish for ots rich colour and flavour. It also has known antiseptic and antibacterial properties. Koraput's fistinct soil and topography suport high-end turmeric rhizomes richin curcumin that gives it a vibrant hue. The best cultivars of turmeric have been preserved and passed down through tribal lore for centuries in this corner of Odisha. Farmer's Collective supported by ORMAS brings home this authentic and organic produce of the Eastern Ghats to your homes.</p>
                 <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5">
                   <div class="flex">
-                    <span class="mr-3">Color</span>
+                    <span class="mr-3"></span>
                     <button class="border-2 border-gray-800 rounded-full w-6 h-6 focus:outline-none"></button>
                     <button class="border-2 border-gray-800 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
                     <button class="border-2 border-gray-800 ml-1 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none"></button>

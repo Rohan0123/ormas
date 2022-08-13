@@ -76,14 +76,24 @@ export default function Home() {
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img id={styles.slider_image} class="d-block w-100" src="Workers.jpeg" alt="First slide" />
+                <img id={styles.slider_image} class="d-block w-100" src="Workers1.jpeg" alt="First slide" />
               </div>
               <div class="carousel-item">
-                <img id={styles.slider_image} class="d-block w-100" src="Worker.jpeg" alt="Second slide" />
+                <img id={styles.slider_image} class="d-block w-100" src="Workers2.jpeg" alt="Second slide" />
               </div>
               <div class="carousel-item">
-                <img id={styles.slider_image} class="d-block w-100" src="Workers.jpeg" alt="Third slide" />
+                <img id={styles.slider_image} class="d-block w-100" src="Workers3.jpeg" alt="Third slide" />
               </div>
+              <div class="carousel-item">
+                <img id={styles.slider_image} class="d-block w-100" src="Workers4.jpeg" alt="Third slide" />
+              </div>
+              <div class="carousel-item">
+                <img id={styles.slider_image} class="d-block w-100" src="Workers5.jpeg" alt="Third slide" />
+              </div>
+              <div class="carousel-item">
+                <img id={styles.slider_image} class="d-block w-100" src="Workers6.jpeg" alt="Third slide" />
+              </div>
+              
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>

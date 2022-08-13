@@ -16,7 +16,7 @@ const products = () => {
               </h1>
               <p class="mb-8 leading-relaxed">Kala Jeera Rice also known as Baby Basmati Rice is a miniature version of the famous Basmati Rice. Althoughit is mostly grown in the Sub Himalayan Rigion, the Koraput climate and conditions provide a  similar environment for this crop to grow. It is ideal for preparing desserts, as a daily staple or as a substitute for sticky rice used un SE Asian cooking.</p>
               <div class="flex justify-center">
-                <Link href="/product_details">
+                <Link href="/Rice">
                 <button class="inline-flex text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded text-lg">More Details</button>
                 </Link>
               </div>
@@ -33,7 +33,7 @@ const products = () => {
               </h1>
               <p class="mb-8 leading-relaxed">Turmeric is the base of every India dish for ots rich colour and flavour. It also has known antiseptic and antibacterial properties. Koraput's fistinct soil and topography suport high-end turmeric rhizomes richin curcumin that gives it a vibrant hue. The best cultivars of turmeric have been preserved and passed down through tribal lore for centuries in this corner of Odisha. Farmer's Collective supported by ORMAS brings home this authentic and organic produce of the Eastern Ghats to your homes.</p>
               <div class="flex justify-center">
-                <Link href="">
+                <Link href="Turmeric">
                 <button class="inline-flex text-black  bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded text-lg">More Details</button>
                 </Link>
               </div>
