@@ -3,24 +3,24 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Image from 'next/image'
 import { AiFillCloseCircle, AiOutlineShoppingCart, AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai"
-import {BsFillBagCheckFill} from "react-icons/Bs"
-import {MdDeleteForever, MdAccountCircle} from "react-icons/Md"
+import { BsFillBagCheckFill } from "react-icons/Bs"
+import { MdDeleteForever, MdAccountCircle } from "react-icons/Md"
 import { useRef } from 'react';
 
-const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
-  const toggleCart= ()=>{
-    if (ref.current.classList.contains('translate-x-full')){
+const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
+  const toggleCart = () => {
+    if (ref.current.classList.contains('translate-x-full')) {
       ref.current.classList.remove('translate-x-full');
       ref.current.classList.add('translate-x-0');
     }
-    else if (!ref.current.classList.contains('translate-x-full')){
+    else if (!ref.current.classList.contains('translate-x-full')) {
       ref.current.classList.remove('translate-x-0');
       ref.current.classList.add('translate-x-full');
     }
   };
-  const ref = useRef(); 
+  const ref = useRef();
 
-  const remove = () =>{
+  const remove = () => {
     ref.current.classList.remove('translate-x-0');
     ref.current.classList.add('translate-x-full');
   }
@@ -99,46 +99,51 @@ const Navbar = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
             <a ><li id={styles.estore} >E-Store</li></a>
           </Link>
         </ul>
-          
 
-          <div onClick={toggleCart} className='hover:cursor-pointer' ><AiOutlineShoppingCart id={styles.cart}/></div>
-          
-          <Link href={"./login"}>
-          <div onClick={0} className='hover:cursor-pointer'><MdAccountCircle id={styles.account}/><h2 className='absolute top-40 right-7'>{Object.keys(cart).length}</h2></div>
-          </Link>
+
+        <div onClick={toggleCart} className='hover:cursor-pointer' ><AiOutlineShoppingCart className='d-none' id={styles.cart} /></div>
+
+        <Link href={"./login"}>
+          <div onClick={0} className='hover:cursor-pointer'>
+            <MdAccountCircle id={styles.account} />
+            <h2 className='d-none absolute top-40 right-7'>{Object.keys(cart).length}</h2>
+          </div>
+        </Link>
 
 
         <div ref={ref} className="sideCart top-48 right-0  font-black text-orange-100 bg-black py-10 px-5  transition-transform duration-1000 translate-x-full w-80 " id={styles.sidebar}>
-        <h2 className='text-center font-serif text-lg'>Shopping cart</h2>
-        <div>
-        <span  className='absolute top-0 right-3 cursor-pointer '>
-          <a><AiFillCloseCircle onClick={remove} className='text-2xl'/></a>
-        </span>
-        </div>
-        <div className='my-5'>
-        <ol className='list-decimal px-8'>
-          {Object.keys(cart).length ===0 && 
-          <div className='text-center font-semibold'>Cart is empty!</div> }
-          {Object.keys(cart).map((k)=>{return <li key={k}>
-            <div className='item flex'>
-              <div className='w-3/5 font-semibold '>
-              {cart[k].name}
-              </div>
-              <div className='flex items-center justify-center w-2/5 font-semibold'>
-              <AiFillMinusCircle onClick={()=>{removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}} className='cart_buttons text-2xl hover:cursor-pointer'/>{cart[k].qty}<AiFillPlusCircle onClick={()=>{addToCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant)}}className='cart_buttons text-2xl hover:cursor-pointer'/>
-              </div>
-            </div>
-          </li>})}
-        </ol>
-        
-        <h2 className="absolute bottom-32 ml-20 font-bold">SubTotal: ₹{subTotal}</h2>
-        <Link href={"./checkout"}>
-        <button class="flex mx-14 my-3 mt-16 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none hover:bg-orange-100 rounded-lg font-semibold absolute bottom-0 mb-16" id={styles.checkout_button}><BsFillBagCheckFill className='my-1 mx-2 '/> Checkout</button>
-        </Link>
+          <h2 className='text-center font-serif text-lg'>Shopping cart</h2>
+          <div>
+            <span className='absolute top-0 right-3 cursor-pointer '>
+              <a><AiFillCloseCircle onClick={remove} className='text-2xl' /></a>
+            </span>
+          </div>
+          <div className='my-5'>
+            <ol className='list-decimal px-8'>
+              {Object.keys(cart).length === 0 &&
+                <div className='text-center font-semibold'>Cart is empty!</div>}
+              {Object.keys(cart).map((k) => {
+                return <li key={k}>
+                  <div className='item flex'>
+                    <div className='w-3/5 font-semibold '>
+                      {cart[k].name}
+                    </div>
+                    <div className='flex items-center justify-center w-2/5 font-semibold'>
+                      <AiFillMinusCircle onClick={() => { removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant) }} className='cart_buttons text-2xl hover:cursor-pointer' />{cart[k].qty}<AiFillPlusCircle onClick={() => { addToCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant) }} className='cart_buttons text-2xl hover:cursor-pointer' />
+                    </div>
+                  </div>
+                </li>
+              })}
+            </ol>
 
-        <button onClick={clearCart} class="flex mx-14 my-3 mt-16 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none hover:bg-orange-100 rounded-lg font-semibold absolute bottom-0" id={styles.checkout_button}><MdDeleteForever className='my-1 mx-2 '/> Clear Cart</button>
+            <h2 className="absolute bottom-32 ml-20 font-bold">SubTotal: ₹{subTotal}</h2>
+            <Link href={"./checkout"}>
+              <button class="flex mx-14 my-3 mt-16 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none hover:bg-orange-100 rounded-lg font-semibold absolute bottom-0 mb-16" id={styles.checkout_button}><BsFillBagCheckFill className='my-1 mx-2 ' /> Checkout</button>
+            </Link>
+
+            <button onClick={clearCart} class="flex mx-14 my-3 mt-16 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none hover:bg-orange-100 rounded-lg font-semibold absolute bottom-0" id={styles.checkout_button}><MdDeleteForever className='my-1 mx-2 ' /> Clear Cart</button>
+          </div>
         </div>
-      </div>
       </nav>
     </div>
   )
