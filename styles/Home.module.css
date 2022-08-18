@@ -15,7 +15,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #000;
 }
 
 #welcome{
@@ -57,16 +56,21 @@
 .slider {
   border-radius: 20px;
   opacity: 1;
+  height: 550px;
   width: 55%;
   padding-left: 0px;
   position: relative;
   margin-left: 5%;
   margin-top: 3%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px 2px wheat;
+
 }
 
 #slider_image{
   height: 550px;
   width: 800px;
+  border-radius: 20px;
 }
 
 
@@ -145,6 +149,7 @@
   flex-wrap: wrap;
   max-width: 560px;
   border: 2px solid wheat;
+  box-shadow: 0px 0px 10px 1px wheat;
   
 }
 
@@ -311,6 +316,7 @@
   padding: 10px 0px;
   color: wheat;
   height: 70px;
+  border-radius: 15px;
 }
 
 .mainNave ul li {
@@ -357,6 +363,7 @@
   color: wheat;
   height: 120px;
   width: 100%;
+  border-radius: 0px 0px 15px 15px;
 }
 
 #mainLogo ul {
@@ -428,6 +435,7 @@
 
 .odisha_logo {
   margin-top: -10px;
+  margin-left: 100px;
 }
 
 .ormas_logo {
@@ -446,11 +454,19 @@
   font-weight: 500;
   font-size: 40px;
   margin-left: -70px;
-  margin: 0px 350px 0px 350px;
+  box-shadow: 0px 0px 15px 2px black;
+
+  
 }
 
-.shakti_logo {
-  margin-top: 10px;
+.kolab_logo {
+  margin: 10px 400px 0px 350px;
+  border-radius: 30px;
+  
+}
+
+#kolab_logo {
+  border-radius: 30px;
 }
 
 .page_title {
@@ -460,15 +476,19 @@
 .page_title{
   display: flex;
 }
-
+#estore_content{
+  display: flex;
+  flex-direction: row;
+}
 #estore_border {
   border: 1px solid wheat;
   border-radius: 20px;
   background-color: #0a0a08;
+  
 }
 
 #estore_border:hover {
-  background-color: wheat;
+  background-color: #333;
   color: #000;
   transition: 1s;
 }
@@ -630,7 +650,7 @@
 #estore{
   background-color: wheat;
   color: #000;
-
+  box-shadow: 0px 0px 15px 2px black;
 }
 
 .home_row
@@ -643,5 +663,5 @@
 
 #product_carousel
 {
-  background-color: #111;
+  background-color: #D7B18C;
 }

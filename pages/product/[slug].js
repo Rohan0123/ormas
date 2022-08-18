@@ -4,26 +4,30 @@ import { useState } from 'react'
 import styles from "/styles/home.module.css"
 import Link from "next/link"
 import { AiOutlineShoppingCart } from "react-icons/ai"
-
-const Post = () => {
+import mongoose from 'mongoose'
+import Product from '../../models/Product'
+const Post = ({ addToCart, product, variants }) => {
   const router = useRouter();
   const { slug } = router.query;
   const [pin, setPin] = useState()
   const [service, setService] = useState()
-  const checkService = async() =>{
+  const checkService = async () => {
     let pins = await fetch("http://localhost:3000/api/pincode")
     let pinJason = await pins.json()
-    if(pinJason.includes(parseInt(pin)))
-    {
+    if (pinJason.includes(parseInt(pin))) {
       setService(true);
     }
     else setService(false);
 
   }
-  const onChangePin = (e) =>{
+  const onChangePin = (e) => {
     setPin(e.target.value)
   }
 
+  const [color, setColor] = useState(product.color)
+  const [size, setSize] = useState(product.size)
+
+  console.log(product, variants);
 
   return <>
     <div id={styles.product_details} className="bg-white">
@@ -31,7 +35,7 @@ const Post = () => {
         <section class="text-gray-400 bg-black body-font overflow-hidden" id={styles.details}>
           <div class="container px-5 py-16 mx-auto">
             <div class="lg:w-4/5 mx-auto flex flex-wrap">
-              <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-xl" src="/Lemon_Grass_Oil.jpeg"/>
+              <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-xl" src="/Lemon_Grass_Oil.jpeg" />
               <div class="lg:w-1/2 lg:pl-10 lg:py-6 mt-6 lg:mt-0 " >
                 <h2 class="text-sm title-font text-gray-500 tracking-widest">ORMAS</h2>
                 <h1 class="text-white text-3xl title-font font-medium mb-1">Lemon Grass Oil</h1>
@@ -75,18 +79,22 @@ const Post = () => {
                 <p class="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
                 <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5">
                   <div class="flex">
-                    <span class="mr-3">Color</span>
-                    <button class="border-2 border-gray-800 rounded-full w-6 h-6 focus:outline-none"></button>
-                    <button class="border-2 border-gray-800 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-                    <button class="border-2 border-gray-800 ml-1 bg-yellow-500 rounded-full w-6 h-6 focus:outline-none"></button>
+                    <span class="mr-6">Color</span>
+
+                    {Object.keys(variants).includes("white") && Object.keys(variants['white']).includes(size) && <button class="border-2 border-gray-800 rounded-full w-6 h-6 focus:outline-none bg-white"></button>}
+                    {Object.keys(variants).includes('red') && Object.keys(variants['red']).includes(size) && <button class="border-2 border-gray-800 ml-1  rounded-full w-6 h-6 focus:outline-none bg-red-600"></button>}
+                    {Object.keys(variants).includes('blue') && Object.keys(variants['blue']).includes(size) && <button class="border-2 border-gray-800 ml-1 rounded-full w-6 h-6 focus:outline-none bg-blue-900"></button>}
+                    {Object.keys(variants).includes('green') && Object.keys(variants['green']).includes(size) && <button class="border-2 border-gray-800 ml-1 rounded-full w-6 h-6 focus:outline-none bg-green-600"></button>}
+                    {Object.keys(variants).includes('black') && Object.keys(variants['black']).includes(size) && <button class="border-2 border-gray-800 ml-1  rounded-full w-6 h-6 focus:outline-none bg-black"></button>}
                   </div>
-                  <div class="flex ml-6 items-center">
+                  <div class="flex ml-2 items-center">
                     <span class="mr-3">Size</span>
                     <div class="relative">
                       <select class="rounded border border-gray-700 focus:ring-2 focus:ring-yellow-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-yellow-500 text-orange-200 pl-3 pr-10">
                         <option className='bg-black hover:bg-orange-200 hover:text-black'>50ml</option>
                         <option className='bg-black hover:bg-orange-200 hover:text-black'>100ml</option>
                         <option className='bg-black hover:bg-orange-200 hover:text-black'>250ml</option>
+
                       </select>
                       <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
@@ -99,9 +107,9 @@ const Post = () => {
                 <div class="flex">
                   <span class="title-font font-medium text-2xl text-white">₹120.00</span>
                   <Link href={"./checkout"}>
-                  <button onClick={()=>{addToCart(slug, 1, 120, "Lemon Grass Oil", "250ml","Oil")}}  class="flex ml-auto text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded">Buy Now</button>
+                    <button onClick={() => { addToCart(slug, 1, 120, "Lemon Grass Oil", "250ml", "Oil") }} class="flex ml-auto text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded">Buy Now</button>
                   </Link>
-                  <button onClick={()=>{addToCart(slug, 1, 120, "Lemon Grass Oil", "250ml","Oil")}} className='hover:cursor-pointer text-3xl mx-5'><AiOutlineShoppingCart /></button>
+                  <button onClick={() => { addToCart(slug, 1, 120, "Lemon Grass Oil", "250ml", "Oil") }} className='hover:cursor-pointer text-3xl mx-5'><AiOutlineShoppingCart /></button>
                   <button class="rounded-full w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                     <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                       <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
@@ -112,11 +120,11 @@ const Post = () => {
                   <input onChange={onChangePin} type="text" maxLength={6} name="" id="" placeholder='Enter Your Pin' className='rounded-md text-orange-200 bg-black border px-1' />
                   <button onClick={checkService} class="flex ml-auto text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded">Check</button>
                 </div>
-                { !service && service!=null && <div className='text-red-500 text-sm none'>
+                {!service && service != null && <div className='text-red-500 text-sm none'>
                   Sorry! Your location isn't servicable.
                 </div>}
 
-                { service && service!=null && <div className='text-orange-200 text-sm block'>
+                {service && service != null && <div className='text-orange-200 text-sm block'>
                   Thanks! Your location is servicable.
                 </div>}
               </div>
@@ -201,6 +209,31 @@ const Post = () => {
       </div>
     </div>
   </>
+}
+
+export async function getServerSideProps(context) {
+  if (!mongoose.connections[0].readyState) {
+    await mongoose.connect(process.env.MONGO_URI = "mongodb://localhost:27017/ormasKoraput")
+  }
+
+  let product = await Product.findOne({ slug: context.query.slug })
+  let variants = await Product.find({ title: product.title })
+  let colorSizeSlug = {}    //{50ml: {slug:'Lemon Grass Oil'}}
+  for (let item of variants) {
+    if (Object.keys(colorSizeSlug).includes(item.color)) {
+      colorSizeSlug[item.color][item.size] = { slug: item.slug }
+    }
+    else {
+      colorSizeSlug[item.color] = {}
+      colorSizeSlug[item.color][item.size] = { slug: item.slug }
+    }
+  }
+
+
+
+  return {
+    props: { product: JSON.parse(JSON.stringify(product)), variants: JSON.parse(JSON.stringify(colorSizeSlug)) }// will be passed to the page component as props
+  }
 }
 
 export default Post

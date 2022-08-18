@@ -115,7 +115,7 @@ export default function Home() {
             <div class="lg:w-1/5 md:w-1/2 p-4  m-auto w-650 hover:text-black" id={styles.estore_border}>
               <Link href="/product_details_Lemon">
                 <a class="block relative h-55 overflow-hidden rounded-lg" >
-                  <img alt="ecommerce" class="m-auto block" src="/Lemon_Grass_Oil.jpeg" />
+                  <img alt="ecommerce" class="m-auto block" src="/Lemon Grass Oil.jpeg" />
 
                   <div class="mt-5 text-center md:text-left">
                     <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>

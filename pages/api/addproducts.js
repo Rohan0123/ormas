@@ -18,7 +18,7 @@ const handler = async (req, res) => {
             })
             await p.save()
         }
-        res.status(200).json({ success: "Success!" })
+        res.status(200).json({ success: "Product Added!" })
     }
     else {
         res.status(400).json({ error: req.body })

@@ -32,12 +32,12 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             <Image src="/odisha_logo.png" width="185px" height="140px" />
           </div>
 
-          <div className={styles.ormas_logo}>
-            <a href="www.ormas.org">ORMAS</a>
+          <div className={styles.kolab_logo}>
+            <Image src="/Kolab_logo.jpg" width="110px" height="100px" id={styles.kolab_logo} />
           </div>
 
-          <div className={styles.shakti_logo}>
-            <Image src="/shakti.png" width="110px" height="100px" />
+          <div className={styles.ormas_logo}>
+            <a href="www.ormas.org">ORMAS</a>
           </div>
 
 
@@ -56,7 +56,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
             <a href="javascript:void(0)" class="dropbtn">About Us</a>
             <div class="dropdown-content">
               <Link href={"/history"} >
-                <a href="#">History</a>
+                <a href="#">Our Organization</a>
               </Link>
               <Link href={"/map"} >
                 <a href="#">Map</a>
