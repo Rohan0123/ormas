@@ -116,15 +116,15 @@ const checkout = ({ cart, addToCart, removeFromCart, subTotal }) => {
               return <li key={k}>
                 <div className='item flex'>
                   <div className='w-1/5 font-semibold '>
-                    {cart[k].name}
+                    {cart[k].name} ( {cart[k].size} )
                   </div>
                   <div className='flex items-center justify-center w-2/5 font-semibold'>
                     <AiFillMinusCircle onClick={() => { removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant) }} className='cart_buttons text-2xl hover:cursor-pointer' />{cart[k].qty}<AiFillPlusCircle onClick={() => { addToCart(k, 1, cart[k].price, cart[k].name, cart[k].size, cart[k].variant) }} className='cart_buttons text-2xl hover:cursor-pointer' />
                   </div>
                 </div>
-                <h2 className="mt-3 font-bold">SubTotal: ₹{subTotal}</h2>
               </li>
             })}
+            <h2 className="mt-3 font-bold">SubTotal: ₹{subTotal}</h2>
           </ol>
         </div>
       </div>
