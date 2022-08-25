@@ -30,78 +30,86 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
   console.log({cart})
   return (
     <div >
-      <nav id={styles.mainLogo} >
+      <nav id={styles.mainLogo}>
         <ul>
           <div className={styles.odisha_logo}>
-            <Image src="/odisha_logo.png" width="185px" height="140px" />
+            <Image src="/odisha_logo.png" width="100px" height="90px" />
           </div>
 
           <div className={styles.kolab_logo}>
-            <Image src="/Kolab_logo.jpg" width="110px" height="100px" id={styles.kolab_logo} />
+            <Image 
+              src="/Kolab_logo.png"
+              width="85px"
+              height="85px"
+              id={styles.kolab_logo}
+            />
           </div>
 
           <div className={styles.ormas_logo}>
             <a href="www.ormas.org">ORMAS</a>
           </div>
-
-
         </ul>
-
       </nav>
 
       <nav id={styles.maiNave} className={styles.mainNave} >
         <nav className={styles.home} ></nav>
         <ul>
-          <Link href={"/"} >
-            <a ><li id='home'>Home</li></a>
+          <Link href={"/"}>
+            <a>
+              <li id="home">Home</li>
+            </a>
           </Link>
-
-          <li class="drp">
-            <a href="javascript:void(0)" class="dropbtn">About Us</a>
-            <div class="dropdown-content">
-              <Link href={"/history"} >
-                <a href="#">Our Organization</a>
-              </Link>
-              <Link href={"/map"} >
-                <a href="#">Map</a>
-              </Link>
-              <Link href={"/demography"} >
-                <a href="#">Demography</a>
-              </Link>
-              <Link href={"/departments"} >
-                <a href="#">Departments</a>
-              </Link>
-            </div>
-          </li>
-
 
           <Link href={"/products"} className={styles.li}>
-            <a><li>Products</li></a>
+            <a>
+              <li>Products</li>
+            </a>
           </Link>
           <Link href={"/exhibition"} className={styles.li}>
-            <a><li>Exhibition</li></a>
+            <a>
+              <li>Exhibition</li>
+            </a>
           </Link>
 
           <li class="drp cursor-pointer">
-            <a href="javascript:void(0)" class="dropbtn ">Notice</a>
+            <a href="javascript:void(0)" class="dropbtn text-black">
+              Notice
+            </a>
             <div class="dropdown-content">
-              <Link href={"/advertisement"} >
+              <Link href={"/advertisement"}>
                 <a href="#">Advertisement</a>
               </Link>
-              <Link href={"/recruitment"} >
+              <Link href={"/recruitment"}>
                 <a href="#">Recruitment</a>
               </Link>
-              <Link href={"/tender"} >
+              <Link href={"/tender"}>
                 <a href="#">Tender</a>
               </Link>
-              <Link href={"/announcement"} >
+              <Link href={"/announcement"}>
                 <a href="#">Announcement</a>
               </Link>
             </div>
           </li>
-          <Link href={"/estore"} >
-            <a ><li id={styles.estore} >E-Store</li></a>
-          </Link>
+
+          <li class="drp ">
+            <a href="javascript:void(0)" className="dropbtn text-black">
+              About Us
+            </a>
+            <div class="dropdown-content">
+              <Link href={"/history"}>
+                <a href="#">History</a>
+              </Link>
+              <Link href={"/map"}>
+                <a href="#">Map</a>
+              </Link>
+              <Link href={"/demography"}>
+                <a href="#">Demography</a>
+              </Link>
+              <Link href={"/departments"}>
+                <a href="#">Departments</a>
+              </Link>
+            </div>
+          </li>
         </ul>
 
 
@@ -110,7 +118,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         <Link href={"./login"}>
           <div onClick={0} className='hover:cursor-pointer'>
             <MdAccountCircle id={styles.account} />
-            <h2 className='d-none absolute top-40 right-7'>{Object.keys(cart).length}</h2>
+            <h2 className='d-none absolute top-28 text-black right-7'>{Object.keys(cart).length}</h2>
           </div>
         </Link>
 
