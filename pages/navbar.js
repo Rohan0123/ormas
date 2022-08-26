@@ -39,7 +39,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
           <div className={styles.kolab_logo}>
             <Image 
               src="/Kolab_logo.png"
-              width="85px"
+              width="75px"
               height="85px"
               id={styles.kolab_logo}
             />
@@ -126,7 +126,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         <div ref={ref} className="sideCart top-48 right-0  font-black text-orange-100 bg-black py-10 px-5  transition-transform duration-1000 translate-x-full w-80 " id={styles.sidebar}>
           <h2 className='text-center font-serif text-lg'>Shopping cart</h2>
           <div>
-            <span className='absolute top-0 right-3 cursor-pointer '>
+            <span className='absolute top-3 right-3 cursor-pointer '>
               <a><AiFillCloseCircle onClick={remove} className='text-2xl' /></a>
             </span>
           </div>

@@ -2,9 +2,12 @@ import "../styles/navbar.css";
 import "../styles/globals.css";
 import Image from "next/image";
 import Navbar from "./navbar";
+import Footer from "./footer"
 import { useState, useEffect } from "react";
 import Router from "next/router";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+  
 function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({});
 
@@ -36,13 +39,41 @@ function MyApp({ Component, pageProps }) {
   const addToCart = (itemCode, qty, price, name, size, variant) => {
     let newCart = cart;
     if (itemCode in cart) {
-      newCart[itemCode].qty = cart[itemCode].qty + qty;
+      toast('This item already exists in your cart!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
     } else {
       newCart[itemCode] = { qty: 1, price, name, size, variant };
     }
     setCart(newCart);
     saveCart(newCart);
   };
+
+  const addToWishList = (itemCode, qty, price, name, size, variant) => {
+    let newCart = cart;
+    if (itemCode in cart) {
+      toast('This item already exists in your wishlist!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+    } else {
+      newCart[itemCode] = { qty: 1, price, name, size, variant };
+    }
+    setCart(newCart);
+    saveCart(newCart);
+  };
+
   const clearCart = () => {
     setCart({});
     saveCart({});
@@ -87,6 +118,8 @@ function MyApp({ Component, pageProps }) {
         subTotal={subTotal}
         {...pageProps}
       />
+      <Footer/>
+
     </>
   );
 }

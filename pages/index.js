@@ -19,7 +19,7 @@ export default function Home({ products }) {
               return <div class="lg:w-1/5 md:w-1/2 p-4  m-auto  w-650" id={styles.estore_border}>
                 <Link key={products[item]._id} href={"/product/"+products[item].slug}>
                   <a class="block relative h-55 overflow-hidden rounded-lg" >
-                    <img alt="ecommerce" class="m-auto block" src={products[item].img} />
+                    <img alt="ecommerce" class="m-auto block" src={products[item].img} id={styles.estore_product}/>
 
                     <div class="mt-5 text-center md:text-left">
                       <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">ORGANIC</h3>

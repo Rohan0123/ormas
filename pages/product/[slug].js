@@ -82,7 +82,7 @@ const Post = ({
               pauseOnHover
             />
             {/* Same as */}
-            <ToastContainer />
+            
             <div class="container px-5 py-16 mx-auto">
               <div class="lg:w-4/5 mx-auto flex flex-wrap">
                 <img
@@ -155,7 +155,7 @@ const Post = ({
                       >
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                       </svg>
-                      <span class="ml-3">4 Reviews</span>
+                      <span class="ml-3">4.5 Reviews</span>
                     </span>
                     <span class="flex ml-3 pl-3 py-2 border-l-2 border-gray-800 text-gray-500 space-x-2">
                       <a>
@@ -318,6 +318,30 @@ const Post = ({
                               50gm
                             </option>
                           )}
+                          {Object.keys(variants[color]).includes("100gm") && (
+                            <option
+                              className="bg-white hover:bg-black hover:text-black"
+                              value={"100gm"}
+                            >
+                              100gm
+                            </option>
+                          )}
+                          {Object.keys(variants[color]).includes("250gm") && (
+                            <option
+                              className="bg-white hover:bg-black hover:text-black"
+                              value={"250gm"}
+                            >
+                              250gm
+                            </option>
+                          )}
+                          {Object.keys(variants[color]).includes("500gm") && (
+                            <option
+                              className="bg-white hover:bg-black hover:text-black"
+                              value={"500gm"}
+                            >
+                              500gm
+                            </option>
+                          )}
                         </select>
                         <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                           <svg
@@ -371,7 +395,7 @@ const Post = ({
                     >
                       <AiOutlineShoppingCart />
                     </button>
-                    <button class="rounded-full w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
+                    <button class="rounded-full w-10 h-10 bg-orange-200 p-0 inline-flex items-center justify-center text-black ml-4">
                       <svg
                         fill="currentColor"
                         stroke-linecap="round"
@@ -395,7 +419,7 @@ const Post = ({
                       name=""
                       id=""
                       placeholder="Enter Your Pin"
-                      className="rounded-md text-orange-200 bg-white border border-gray-500 px-1"
+                      className="rounded-md text-black bg-white border border-gray-500 px-1"
                     />
                     <button
                       onClick={checkService}
@@ -405,13 +429,13 @@ const Post = ({
                     </button>
                   </div>
                   {!service && service != null && (
-                    <div className="text-red-500 text-sm none">
+                    <div className="mt-2 text-red-500 text-sm none">
                       Sorry! Your location isn't servicable.
                     </div>
                   )}
 
                   {service && service != null && (
-                    <div className="text-orange-200 text-sm block">
+                    <div className="mt-2 text-orange-600 text-sm block">
                       Thanks! Your location is servicable.
                     </div>
                   )}
@@ -559,8 +583,8 @@ const Post = ({
                   </div>
                 </div>
               </div>
-              <Link href="">
-                <button class="flex mx-auto mt-16 text-black bg-yellow-500 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-600 rounded text-lg">
+              <Link href="#">
+                <button class="flex mx-auto mt-16 text-black bg-orange-200 border-0 py-2 px-8 focus:outline-none hover:bg-orange-100 rounded text-lg">
                   Top
                 </button>
               </Link>

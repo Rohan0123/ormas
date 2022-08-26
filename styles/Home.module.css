@@ -507,7 +507,7 @@
 }
 
 #estore_border:hover {
-  background-color: #333;
+  background-color: #F0E2D4;
   color: #000;
   transition: 1s;
 }
@@ -691,5 +691,16 @@
 
 #product_image
 {
-  box-shadow: 0px 0px 8px black;
+  box-shadow: 0px 0px 20px black;
+}
+
+#estore_product
+{
+  box-shadow: 0px 0px 10px black;
+}
+
+#footer
+{
+  box-shadow: 0px 0px 5px black;
+  margin-bottom: 10px;
 }
