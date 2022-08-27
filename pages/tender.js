@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 
 const tender = () => {
   return (
-    <div className={styles.menu} ><h2>Tender Notification</h2></div>
+    <div class={styles.menu} ><h2>Tender Notification</h2></div>
   )
 }
 

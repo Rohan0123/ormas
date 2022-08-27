@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css"
 
 const notice = () => {
   return (
-    <div className={styles.page_title}>notice</div>
+    <div class={styles.page_title}>notice</div>
   )
 }
 

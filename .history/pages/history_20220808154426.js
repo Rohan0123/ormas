@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css"
 const history = () => {
   return (
     <div id="history">
-    <div className={styles.page_title}>
+    <div class={styles.page_title}>
       <h2>Our Journey</h2>
     </div>
 

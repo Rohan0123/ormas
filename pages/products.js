@@ -3,8 +3,8 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link"
 const products = () => {
   return (
-    <div className={styles.menu}><h2>Our Products</h2>
-      <div className={styles.product}>
+    <div class={styles.menu}><h2>Our Products</h2>
+      <div class={styles.product}>
       <div id='Kala Jeera Rice'>
         <section id="Kala Jeera" class="text-gray-600 bg-white body-font">
           <div class="container mx-auto flex px-5 py-20 md:flex-row flex-col items-center">

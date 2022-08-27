@@ -26,11 +26,11 @@ export default function Home({ products }) {
                       <h2 class="text-black title-font text-lg font-medium">{products[item].title}</h2>
                       <p class=" text-gray-700 mt-1">₹{products[item].price}</p>
                       <div class="absolute right-0 bottom-0 mt-1 mr-2 text-black rounded">
-                        {products[item].size.includes('50ml') && <span className='border px-1  border-gray-500 mx-1 rounded'> 50ml </span>}
-                        {products[item].size.includes('100ml') && <span className='border px-1  border-gray-500  mx-1 rounded'> 100ml </span>}
-                        {products[item].size.includes('50gm') && <span className='border px-1  border-gray-500  mx-1 rounded'>50gm</span>}
-                        {products[item].size.includes('100gm') && <span className='border px-1  border-gray-500  mx-1 rounded'>100ml</span>}
-                        {products[item].size.includes('250gm') && <span className='border px-1  border-gray-500  mx-1 rounded'>250ml</span>}
+                        {products[item].size.includes('50ml') && <span class='border px-1  border-gray-500 mx-1 rounded'> 50ml </span>}
+                        {products[item].size.includes('100ml') && <span class='border px-1  border-gray-500  mx-1 rounded'> 100ml </span>}
+                        {products[item].size.includes('50gm') && <span class='border px-1  border-gray-500  mx-1 rounded'>50gm</span>}
+                        {products[item].size.includes('100gm') && <span class='border px-1  border-gray-500  mx-1 rounded'>100ml</span>}
+                        {products[item].size.includes('250gm') && <span class='border px-1  border-gray-500  mx-1 rounded'>250ml</span>}
                         </div>
                     </div>
                   </a>

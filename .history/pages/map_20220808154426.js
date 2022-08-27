@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css"
 
 const map = () => {
   return (
-    <div className={styles.page_title}>map</div>
+    <div class={styles.page_title}>map</div>
   )
 }
 

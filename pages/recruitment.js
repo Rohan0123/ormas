@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css"
 
 const recruitment = () => {
   return (
-    <div className={styles.page_title}>recruitment</div>
+    <div class={styles.page_title}>recruitment</div>
   )
 }
 

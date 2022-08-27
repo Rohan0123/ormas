@@ -27,8 +27,8 @@ const Post = ({addToCart}) => {
   
 
   return <>
-    <div id={styles.product_details} className="bg-white">
-      <div className="details">
+    <div id={styles.product_details} class="bg-white">
+      <div class="details">
         <section class="text-gray-400 bg-black body-font overflow-hidden" id={styles.details}>
           <div class="container px-5 py-16 mx-auto">
             <div class="lg:w-4/5 mx-auto flex flex-wrap">
@@ -85,9 +85,9 @@ const Post = ({addToCart}) => {
                     <span class="mr-3">Size</span>
                     <div class="relative">
                       <select class="rounded border border-gray-700 focus:ring-2 focus:ring-yellow-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-yellow-500 text-orange-200 pl-3 pr-10">
-                        <option className='bg-black hover:bg-orange-200 hover:text-black'>50ml</option>
-                        <option className='bg-black hover:bg-orange-200 hover:text-black'>100ml</option>
-                        <option className='bg-black hover:bg-orange-200 hover:text-black'>250ml</option>
+                        <option class='bg-black hover:bg-orange-200 hover:text-black'>50ml</option>
+                        <option class='bg-black hover:bg-orange-200 hover:text-black'>100ml</option>
+                        <option class='bg-black hover:bg-orange-200 hover:text-black'>250ml</option>
                       </select>
                       <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
@@ -102,22 +102,22 @@ const Post = ({addToCart}) => {
                   <Link href={"./checkout"}>
                   <button onClick={()=>{addToCart(1, 1, 120, "Lemon Grass Oil", "250ml","Oil")}}  class="flex ml-auto text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded">Buy Now</button>
                   </Link>
-                  <button onClick={()=>{addToCart(1, 1, 120, "Lemon Grass Oil", "250ml","Oil")}} className='hover:cursor-pointer hover:text-orange-200 text-3xl mx-5'><AiOutlineShoppingCart /></button>
+                  <button onClick={()=>{addToCart(1, 1, 120, "Lemon Grass Oil", "250ml","Oil")}} class='hover:cursor-pointer hover:text-orange-200 text-3xl mx-5'><AiOutlineShoppingCart /></button>
                   <button class="rounded-full w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                     <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
                       <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                     </svg>
                   </button>
                 </div>
-                <div id={styles.pin} className="flex flex-row space-x-2 text-sm" >
-                  <input onChange={onChangePin} type="text" name="" id="" placeholder='Enter Your Pin' className='rounded-md text-orange-200 bg-black border px-1' />
+                <div id={styles.pin} class="flex flex-row space-x-2 text-sm" >
+                  <input onChange={onChangePin} type="text" name="" id="" placeholder='Enter Your Pin' class='rounded-md text-orange-200 bg-black border px-1' />
                   <button onClick={checkService} class="flex ml-auto text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded">Check</button>
                 </div>
-                { !service && service!=null && <div className='text-red-500 text-sm none'>
+                { !service && service!=null && <div class='text-red-500 text-sm none'>
                   Sorry! Your location isn't servicable.
                 </div>}
 
-                { service && service!=null && <div className='text-orange-200 text-sm block'>
+                { service && service!=null && <div class='text-orange-200 text-sm block'>
                   Thanks! Your location is servicable.
                 </div>}
               </div>
@@ -129,7 +129,7 @@ const Post = ({addToCart}) => {
 
 
 
-      <div className="product_features">
+      <div class="product_features">
         <section class="text-gray-400 bg-black body-font my-5">
           <div class="container px-5 py-24 mx-auto">
             <div class="text-center mb-20">

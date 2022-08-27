@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css"
 
 const departments = () => {
   return (
-    <div className={styles.page_title}>departments</div>
+    <div class={styles.page_title}>departments</div>
   )
 }
 

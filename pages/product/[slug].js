@@ -64,8 +64,8 @@ const Post = ({
   console.log(product.title);
   return (
     <>
-      <div id={styles.product_details} className="bg-white">
-        <div className="details">
+      <div id={styles.product_details} class="bg-white">
+        <div class="details">
           <section
             class="text-gray-900 bg-white body-font overflow-hidden"
             id={styles.details}
@@ -288,7 +288,7 @@ const Post = ({
                         >
                           {Object.keys(variants[color]).includes("50ml") && (
                             <option
-                              className="bg-white hover:bg-black hover:text-black"
+                              class="bg-white hover:bg-black hover:text-black"
                               value={"50ml"}
                             >
                               50ml
@@ -296,7 +296,7 @@ const Post = ({
                           )}
                           {Object.keys(variants[color]).includes("100ml") && (
                             <option
-                              className="bg-white hover:bg-black hover:text-black"
+                              class="bg-white hover:bg-black hover:text-black"
                               value={"100ml"}
                             >
                               100ml
@@ -304,7 +304,7 @@ const Post = ({
                           )}
                           {Object.keys(variants[color]).includes("250ml") && (
                             <option
-                              className="bg-white hover:bg-black hover:text-black"
+                              class="bg-white hover:bg-black hover:text-black"
                               value={"250ml"}
                             >
                               250ml
@@ -312,7 +312,7 @@ const Post = ({
                           )}
                           {Object.keys(variants[color]).includes("50gm") && (
                             <option
-                              className="bg-white hover:bg-black hover:text-black"
+                              class="bg-white hover:bg-black hover:text-black"
                               value={"50gm"}
                             >
                               50gm
@@ -320,7 +320,7 @@ const Post = ({
                           )}
                           {Object.keys(variants[color]).includes("100gm") && (
                             <option
-                              className="bg-white hover:bg-black hover:text-black"
+                              class="bg-white hover:bg-black hover:text-black"
                               value={"100gm"}
                             >
                               100gm
@@ -328,7 +328,7 @@ const Post = ({
                           )}
                           {Object.keys(variants[color]).includes("250gm") && (
                             <option
-                              className="bg-white hover:bg-black hover:text-black"
+                              class="bg-white hover:bg-black hover:text-black"
                               value={"250gm"}
                             >
                               250gm
@@ -336,7 +336,7 @@ const Post = ({
                           )}
                           {Object.keys(variants[color]).includes("500gm") && (
                             <option
-                              className="bg-white hover:bg-black hover:text-black"
+                              class="bg-white hover:bg-black hover:text-black"
                               value={"500gm"}
                             >
                               500gm
@@ -391,7 +391,7 @@ const Post = ({
                           product.color
                         );
                       }}
-                      className="hover:cursor-pointer text-3xl mx-5"
+                      class="hover:cursor-pointer text-3xl mx-5"
                     >
                       <AiOutlineShoppingCart />
                     </button>
@@ -410,7 +410,7 @@ const Post = ({
                   </div>
                   <div
                     id={styles.pin}
-                    className="flex flex-row space-x-2 text-sm"
+                    class="flex flex-row space-x-2 text-sm"
                   >
                     <input
                       onChange={onChangePin}
@@ -419,7 +419,7 @@ const Post = ({
                       name=""
                       id=""
                       placeholder="Enter Your Pin"
-                      className="rounded-md text-black bg-white border border-gray-500 px-1"
+                      class="rounded-md text-black bg-white border border-gray-500 px-1"
                     />
                     <button
                       onClick={checkService}
@@ -429,13 +429,13 @@ const Post = ({
                     </button>
                   </div>
                   {!service && service != null && (
-                    <div className="mt-2 text-red-500 text-sm none">
+                    <div class="mt-2 text-red-500 text-sm none">
                       Sorry! Your location isn't servicable.
                     </div>
                   )}
 
                   {service && service != null && (
-                    <div className="mt-2 text-orange-600 text-sm block">
+                    <div class="mt-2 text-orange-600 text-sm block">
                       Thanks! Your location is servicable.
                     </div>
                   )}
@@ -445,7 +445,7 @@ const Post = ({
           </section>
         </div>
 
-        <div className="product_features">
+        <div class="product_features">
           <section class="text-gray-400 bg-white body-font my-1">
             <div class="container px-5 py-24 mx-auto">
               <div class="text-center mb-20">
