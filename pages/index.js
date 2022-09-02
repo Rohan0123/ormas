@@ -9,12 +9,12 @@ import Product from '../models/Product';
 import mongoose from "mongoose"
 
 export default function Home({ products }) {
+  console.log(process.env.MONGO_URI)
   return (
     <div >
-
       <section class="text-gray-400 bg-white body-font">
         <div class="container px-5 py-16 mx-auto ">
-          <div class="flex flex-wrap -m-4 w-55 md:ml-52" id={styles.estore_content} >
+          <div class="flex flex-wrap m-3 w-55 md:ml-52 -mt-5" id={styles.estore_content} >
             {Object.keys(products).map((item) => {
               return <div class="lg:w-1/5 md:w-1/2 p-4  m-auto  w-650" id={styles.estore_border}>
                 <Link key={products[item]._id} href={"/product/"+products[item].slug}>

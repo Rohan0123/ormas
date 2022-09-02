@@ -118,9 +118,9 @@ const footer = () => {
               <a class="text-gray-500">
                 <svg
                   fill="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                   
+                  strokeWidth="2"
                   class="w-5 h-5"
                   viewBox="0 0 24 24"
                 >
@@ -130,9 +130,9 @@ const footer = () => {
               <a class="ml-3 text-gray-500">
                 <svg
                   fill="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                   
+                  strokeWidth="2"
                   class="w-5 h-5"
                   viewBox="0 0 24 24"
                 >
@@ -143,9 +143,9 @@ const footer = () => {
                 <svg
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                   
+                  strokeWidth="2"
                   class="w-5 h-5"
                   viewBox="0 0 24 24"
                 >
@@ -157,9 +157,9 @@ const footer = () => {
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="0"
+                  strokeLinecap="round"
+                   
+                  strokeWidth="0"
                   class="w-5 h-5"
                   viewBox="0 0 24 24"
                 >

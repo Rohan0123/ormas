@@ -16,7 +16,7 @@ const history = () => {
         <p class="leading-relaxed text-base">To create different marketing channels for the micro enterprises, rural producers to develop sustainable livelihood through adopting appropriate rural technology, product development & diversification with accepted designs, packaging, certification, branding activities etc, Government in Panchayati Raj & Drinking Water Department has created “Odisha Rural Development and Marketing Society (ORMAS)” on 14th January 1991and registered under Societies Registration Act-1860, it has been rendering yeomen services in livelihood promotion and rural product marketing in Odisha.  ORMAS and DSMSs have been successfully operating since last 25 years for establishment of a strong marketing network for rural produces.</p>
         <div class="flex md:mt-4 mt-6">
           <a class="text-orange-100 inline-flex items-center ml-4">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <svg fill="none" stroke="currentColor" strokeLinecap="round"   strokeWidth="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </a>
@@ -34,7 +34,7 @@ const history = () => {
 ORMAS has already imbibed a role of facilitator rather than implementer and work in partnerships with other institutions/agencies for sustainability of the initiatives which it started long back. While there has been change in ORMAS’s role, at the same time the role of all partners are being evolved.  ORMAS keep on working more at a systemic level.</p>
         <div class="flex md:mt-4 mt-6">
           <a class="text-orange-100 inline-flex items-center ml-4">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <svg fill="none" stroke="currentColor" strokeLinecap="round"   strokeWidth="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </a>

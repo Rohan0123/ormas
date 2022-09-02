@@ -300,14 +300,7 @@
     margin-left: 1830px;
     
   }
-  #account {
-    position: absolute;
-    margin-left: 1730px;
-    font-size: 30px;
-    margin-top: -40px;
-    color: #000;
-
-  }
+  
 }
 
 #home {
@@ -341,10 +334,10 @@
   padding: 6px 40px 10px 40px;
   border: 1px solid wheat;
   border-radius: 70px;
-  background-color: #E1C4A9;
+  background-color: #e6c8ac;
   height: 120%;
   color: #000;
-  box-shadow: 0px 0px 4px 1px black;
+  box-shadow: 0px 0px 10px -1px black;
 }
 
 @media screen and (max-width: 480px) {
@@ -501,7 +494,7 @@
   border: 1px solid wheat;
   border-radius: 0px;
   background-color: #fafafa;
-  box-shadow: 0px 1px 7px black;
+  box-shadow: 0px 1px 20px -6px black;
   color: #000;
 
 }
@@ -536,16 +529,17 @@
 }
 
 #sidebar:hover {
-  background-color: wheat;
+  background-color: #F0E2D4;
   color: #000;
   font-weight: 700;
   transition: 1s;
+  border-color:#000;
 }
 
 @media screen and (min-width: 1500px) {
   #sidebar {
     position: absolute;
-    top:48; 
+    top:150px; 
     right:0;
   }
 }
@@ -562,6 +556,7 @@
 #checkout_button
 {
   border: 1px solid white;
+  
 }
 
 #checkout_button:hover
@@ -569,6 +564,7 @@
   background-color: wheat;
   color: black;
   transition: 1s;
+  border-color: #000;
 }
 
 #navbar
@@ -580,7 +576,7 @@
 {
   margin: 20px 0px;
   padding: 10px 0px;
-  background-color: #111;
+  background-color: #F0E2D4;
   width: 100%;
 }
 
@@ -689,10 +685,6 @@
 
 }
 
-#product_image
-{
-  box-shadow: 0px 0px 20px black;
-}
 
 #estore_product
 {
@@ -704,3 +696,57 @@
   box-shadow: 0px 0px 5px black;
   margin-bottom: 10px;
 }
+
+#login_button{
+  background-color: #E1C4A9;
+  box-shadow: 0px 0px 3px black;
+}
+
+
+
+/* Responsive View */
+@media screen and (max-width:450px) {
+  #nav_buttons{
+    position:absolute;
+    top: 175px;
+    right: -1100px;
+    font-size: xx-large;
+  }
+
+  #nav_buttons button{
+    font-size: large;
+    font-weight: 700;
+  }
+  
+  .ormas_logo{
+    margin-top: 50px;
+  }
+  .ormas_logo a {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px 50px;
+  }
+
+  #mainLogo_image{
+    width: 130px;
+    height: 140px;
+  }
+  #mainLogo{
+    height: 210%;
+  }
+
+  .mainNave ul{
+    height: 70px;
+  }
+
+  .mainNave ul li{
+    height: 50px;
+    margin: 2px 20px;
+    font-size: 25px;
+  }
+
+  #estore_border{
+    width: 600px;
+    margin-top: 40px;
+  }
+}
+

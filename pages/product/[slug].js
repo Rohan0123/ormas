@@ -23,7 +23,7 @@ const Post = ({
   const [pin, setPin] = useState();
   const [service, setService] = useState();
   const checkService = async () => {
-    let pins = await fetch("http://localhost:3000/api/pincode");
+    let pins = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pincode`);
     let pinJason = await pins.json();
     if (pinJason.includes(parseInt(pin))) {
       setService(true);
@@ -57,7 +57,7 @@ const Post = ({
   const [size, setSize] = useState(product.size);
 
   const refreshVariants = (newSize, newColor) => {
-    let url = `http://localhost:3000/product/${variants[newColor][newSize]["slug"]}`;
+    let url = `${process.env.NEXT_PUBLIC_HOST}/product/${variants[newColor][newSize]["slug"]}`;
     window.location = url;
   };
 
@@ -83,13 +83,14 @@ const Post = ({
             />
             {/* Same as */}
             
-            <div class="container px-5 py-16 mx-auto">
-              <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="container px-7 my-7 mx-auto">
+              <div class="lg:w-4/5 mx-auto  flex flex-wrap">
                 <img
                   alt="ecommerce"
-                  class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-xl"
+                  class="lg:w-1/2 lg:h-fit h-64 object-cover object-center rounded-xl"
                   src={product.img}
                   id={styles.product_image}
+                  
                 />
                 <div class="lg:w-1/2 lg:pl-10 lg:py-6 mt-6 lg:mt-0 ">
                   <h2 class="text-sm title-font text-gray-500 tracking-widest">
@@ -103,9 +104,9 @@ const Post = ({
                       <svg
                         fill="currentColor"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                         
+                        strokeWidth="2"
                         class="w-4 h-4 text-yellow-400"
                         viewBox="0 0 24 24"
                       >
@@ -114,9 +115,9 @@ const Post = ({
                       <svg
                         fill="currentColor"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                         
+                        strokeWidth="2"
                         class="w-4 h-4 text-yellow-400"
                         viewBox="0 0 24 24"
                       >
@@ -125,9 +126,9 @@ const Post = ({
                       <svg
                         fill="currentColor"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                         
+                        strokeWidth="2"
                         class="w-4 h-4 text-yellow-400"
                         viewBox="0 0 24 24"
                       >
@@ -136,9 +137,9 @@ const Post = ({
                       <svg
                         fill="currentColor"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                         
+                        strokeWidth="2"
                         class="w-4 h-4 text-yellow-400"
                         viewBox="0 0 24 24"
                       >
@@ -147,9 +148,9 @@ const Post = ({
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                         
+                        strokeWidth="2"
                         class="w-4 h-4 text-yellow-400"
                         viewBox="0 0 24 24"
                       >
@@ -161,9 +162,9 @@ const Post = ({
                       <a>
                         <svg
                           fill="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                           
+                          strokeWidth="2"
                           class="w-5 h-5"
                           viewBox="0 0 24 24"
                         >
@@ -173,9 +174,9 @@ const Post = ({
                       <a>
                         <svg
                           fill="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                           
+                          strokeWidth="2"
                           class="w-5 h-5"
                           viewBox="0 0 24 24"
                         >
@@ -185,9 +186,9 @@ const Post = ({
                       <a>
                         <svg
                           fill="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                           
+                          strokeWidth="2"
                           class="w-5 h-5"
                           viewBox="0 0 24 24"
                         >
@@ -347,9 +348,9 @@ const Post = ({
                           <svg
                             fill="none"
                             stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                             
+                            strokeWidth="2"
                             class="w-4 h-4"
                             viewBox="0 0 24 24"
                           >
@@ -388,7 +389,8 @@ const Post = ({
                           product.price,
                           product.title,
                           product.size,
-                          product.color
+                          product.color,
+                          product.availableQty
                         );
                       }}
                       class="hover:cursor-pointer text-3xl mx-5"
@@ -398,9 +400,9 @@ const Post = ({
                     <button class="rounded-full w-10 h-10 bg-orange-200 p-0 inline-flex items-center justify-center text-black ml-4">
                       <svg
                         fill="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                         
+                        strokeWidth="2"
                         class="w-5 h-5"
                         viewBox="0 0 24 24"
                       >
@@ -435,7 +437,7 @@ const Post = ({
                   )}
 
                   {service && service != null && (
-                    <div class="mt-2 text-orange-600 text-sm block">
+                    <div class="mt-2 text-green-800 text-sm block">
                       Thanks! Your location is servicable.
                     </div>
                   )}
@@ -467,9 +469,9 @@ const Post = ({
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                       
+                      strokeWidth="2"
                       class="w-10 h-10"
                       viewBox="0 0 24 24"
                     >
@@ -490,9 +492,9 @@ const Post = ({
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                         
+                        strokeWidth="2"
                         class="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                       >
@@ -506,9 +508,9 @@ const Post = ({
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                       
+                      strokeWidth="2"
                       class="w-10 h-10"
                       viewBox="0 0 24 24"
                     >
@@ -531,9 +533,9 @@ const Post = ({
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                         
+                        strokeWidth="2"
                         class="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                       >
@@ -547,9 +549,9 @@ const Post = ({
                     <svg
                       fill="none"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                       
+                      strokeWidth="2"
                       class="w-10 h-10"
                       viewBox="0 0 24 24"
                     >
@@ -571,9 +573,9 @@ const Post = ({
                       <svg
                         fill="none"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                         
+                        strokeWidth="2"
                         class="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                       >

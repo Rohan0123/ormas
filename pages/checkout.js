@@ -10,10 +10,10 @@ const checkout = ({ cart, addToCart, removeFromCart, subTotal }) => {
   const intiatePayment = async() => {
     
     let oid = Math.floor(Math.random() * Date.now());
-    let a = await fetch("http://localhost:3000/api/pretransaction")
+    let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pretransaction`)
     const data = { cart, subTotal, oid, email: "email" };
 
-    fetch('http://localhost:3000/api/pretransaction', {
+    fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pretransaction`, {
       method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
@@ -57,19 +57,19 @@ const checkout = ({ cart, addToCart, removeFromCart, subTotal }) => {
     <script type="application/javascript" crossorigin="anonymous" src="https://securegw.paytm.in/merchantpgpui/checkoutjs/merchants/{MID}.js" />
 
 
-    <div class='text-center font-bold text-2xl ' id={styles.checkout_head}>Checkout</div>
+    <div class='text-center font-bold text-2xl text-black' id={styles.checkout_head}>Checkout</div>
     <div class='lg:w-1/2 md:w-2/3 mx-auto ' id={styles.checkout}>
       <div class='ml-2' id={styles.delivery_details}>
-        <h2 class='font-bold text-xl mb-5 ml-56' id={styles.checkout_title}>1. Delivery Details</h2>
+        <h2 class='font-bold text-xl mb-5 ml-56 text-black' id={styles.checkout_title}>1. Delivery Details</h2>
         <div class='flex'>
           <div class="relative justify-center" id={styles.checkout_details}>
-            <label for="name" class="leading-7 text-sm text-orange-100">Name:</label>
-            <input type="text" id="name" name="name" class="w-96 bg-orange-100 rounded border border-gray-300 focus:border-orange-200 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+            <label for="name" class="leading-7 text-sm text-black font-semibold">Name:</label>
+            <input type="text" id="name" name="name" class="w-96 bg-orange-200 border-1 border-black  rounded border border-gray-300 focus:border-orange-200 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
           </div>
 
           <div class="relative mt-28 ml-44" id={styles.checkout_details}>
-            <label for="email" class="leading-7 text-sm text-orange-100">E-mail:</label>
-            <input type="email" id="email" name="email" class="w-96 bg-orange-100 rounded border border-gray-300 focus:border-orange-200 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+            <label for="email" class="leading-7 text-sm text-black font-semibold">E-mail:</label>
+            <input type="email" id="email" name="email" class="w-96 bg-orange-200 border-1 border-black  rounded border border-gray-300 focus:border-orange-200 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
           </div>
         </div>
       </div>
@@ -77,8 +77,8 @@ const checkout = ({ cart, addToCart, removeFromCart, subTotal }) => {
 
         <div class="p-2 w-full">
           <div class="relative">
-            <label for="address" class="leading-7 text-sm text-orange-100">Address</label>
-            <textarea id="message" name="message" class="w-full bg-orange-100 bg-opacity-50 rounded border border-gray-300 focus:border-orange-200 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            <label for="address" class="leading-7 text-sm text-black font-semibold">Address</label>
+            <textarea id="message" name="message" class="w-full bg-orange-200 border-1 border-black  bg-opacity-50 rounded border border-gray-300 focus:border-orange-200 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
           </div>
 
         </div>
@@ -86,27 +86,27 @@ const checkout = ({ cart, addToCart, removeFromCart, subTotal }) => {
       </div>
       <div class='flex ml-2'>
         <div class="relative justify-center" id={styles.checkout_details}>
-          <label for="phone" class="leading-7 text-sm text-orange-100">Phone no.:</label>
-          <input type="text" maxLength={10} id="phone" name="phone" class="w-96 bg-orange-100 rounded border border-gray-300 focus:border-orange-200 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+          <label for="phone" class="leading-7 text-sm text-black font-semibold">Phone no.:</label>
+          <input type="text" maxLength={10} id="phone" name="phone" class="w-96 bg-orange-200 border-1 border-black  rounded border border-gray-300 focus:border-orange-200 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
         </div>
 
         <div class="relative mt-28 ml-44" id={styles.checkout_details}>
-          <label for="pin" class="leading-7 text-sm text-orange-100">Pincode:</label>
-          <input type="text" id="pin" name="pin" class="w-96 bg-orange-100 rounded border border-gray-300 focus:border-orange-200 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+          <label for="pin" class="leading-7 text-sm text-black font-semibold">Pincode:</label>
+          <input type="text" id="pin" name="pin" class="w-96 bg-orange-200 border-1 border-black  rounded border border-gray-300 focus:border-orange-200 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
         </div>
       </div>
       <div class='flex ml-2'>
         <div class="relative justify-center" id={styles.checkout_details}>
-          <label for="district" class="leading-7 text-sm text-orange-100">District:</label>
-          <input type="text" id="district" name="city" class="w-96 bg-orange-100 rounded border border-gray-300 focus:border-orange-200 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+          <label for="district" class="leading-7 text-sm text-black font-semibold">District:</label>
+          <input type="text" id="district" name="city" class="w-96 bg-orange-200 border-1 border-black  rounded border border-gray-300 focus:border-orange-200 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
         </div>
 
         <div class="relative mt-28 ml-44" id={styles.checkout_details}>
-          <label for="state" class="leading-7 text-sm text-orange-100">State:</label>
-          <input type="text" id="state" name="state" class="w-96 bg-orange-100 rounded border border-gray-300 focus:border-orange-200 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+          <label for="state" class="leading-7 text-sm text-black font-semibold">State:</label>
+          <input type="text" id="state" name="state" class="w-96 bg-orange-200 border-1 border-black  rounded border border-gray-300 focus:border-orange-200 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
         </div>
       </div>
-      <h1 class='mt-5 mb-5 font-bold text-xl'>2. Review Cart Items & Pay</h1>
+      <h1 class='mt-5 mb-5 font-bold text-xl text-black'>2. Review Cart Items & Pay</h1>
       <div class="sideCart  font-black text-black bg-orange-200 py-10 px-5 w-full mb-5 rounded">
         <div class='my-5'>
           <ol class='list-decimal px-8'>

@@ -16,7 +16,7 @@ const history = () => {
         <p class="leading-relaxed text-base">To create different marketing channels for the micro enterprises, rural producers to develop sustainable livelihood through adopting appropriate rural technology, product development & diversification with accepted designs, packaging, certification, branding activities etc, Government in Panchayati Raj & Drinking Water Department has created “Odisha Rural Development and Marketing Society (ORMAS)” on 14th January 1991and registered under Societies Registration Act-1860, it has been rendering yeomen services in livelihood promotion and rural product marketing in Odisha.  ORMAS and DSMSs have been successfully operating since last 25 years for establishment of a strong marketing network for rural produces.</p>
         <div class="flex md:mt-4 mt-6">
           <a class="text-yellow-400 inline-flex items-center ml-4">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <svg fill="none" stroke="currentColor" strokeLinecap="round"   strokeWidth="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </a>
@@ -35,7 +35,7 @@ ORMAS has already imbibed a role of facilitator rather than implementer and work
         <div class="flex md:mt-4 mt-6">
           <button class="inline-flex text-white bg-yellow-500 border-0 py-1 px-4 focus:outline-none hover:bg-yellow-600 rounded">Button</button>
           <a class="text-yellow-400 inline-flex items-center ml-4">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <svg fill="none" stroke="currentColor" strokeLinecap="round"   strokeWidth="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </a>

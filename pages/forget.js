@@ -1,8 +1,15 @@
 import React from 'react'
 import styles from "../styles/Home.module.css";
 import Link from 'next/link';
+import { useEffect } from 'react';
+import Router from 'next/router';
 
 const forget = () => {
+  useEffect(() => {
+    if(localStorage.getItem('token')){
+      Router.push('/')
+    }
+  }, [])
   return (
     <div>
         <section class="h-full gradient-form bg-black mx-auto md:h-screen w-2/3">

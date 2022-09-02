@@ -17,7 +17,7 @@ const history = () => {
         <div class="flex md:mt-4 mt-6">
           <button class="inline-flex text-white bg-yellow-500 border-0 py-1 px-4 focus:outline-none hover:bg-yellow-600 rounded">Button</button>
           <a class="text-yellow-400 inline-flex items-center ml-4">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <svg fill="none" stroke="currentColor" strokeLinecap="round"   strokeWidth="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </a>
@@ -36,7 +36,7 @@ ORMAS has already imbibed a role of facilitator rather than implementer and work
         <div class="flex md:mt-4 mt-6">
           <button class="inline-flex text-white bg-yellow-500 border-0 py-1 px-4 focus:outline-none hover:bg-yellow-600 rounded">Button</button>
           <a class="text-yellow-400 inline-flex items-center ml-4">Learn More
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <svg fill="none" stroke="currentColor" strokeLinecap="round"   strokeWidth="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </a>

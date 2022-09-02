@@ -5,10 +5,17 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Router from "next/router";
+import { useEffect } from "react";
 
 const login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  useEffect(() => {
+    if(localStorage.getItem('token')){
+      Router.push('/')
+    }
+  }, [])
+  
   const handleChange = (e) => {
     if (e.target.name == "email") {
       setEmail(e.target.value);
@@ -21,7 +28,7 @@ const login = () => {
     {
         email = email.toLowerCase();
       const data = { email, password };
-      let res = await fetch("http://localhost:3000/api/logIn", {
+      let res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/logIn`, {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",
@@ -35,9 +42,10 @@ const login = () => {
       setEmail("");
       setPassword("");
       if (response.success) {
+        localStorage.setItem('token', response.token)
         toast("You're successfully logged in !", {
           position: "top-center",
-          autoClose: 3000,
+          autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -45,14 +53,14 @@ const login = () => {
           progress: undefined,
         });
         setTimeout(() => {
-            Router.push("/");
+            Router.push(process.env.NEXT_PUBLIC_HOST);
           }, "2000")
         
       } 
       else {
         toast.error(response.error, {
           position: "top-right",
-          autoClose: 5000,
+          autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
