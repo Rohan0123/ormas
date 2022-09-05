@@ -87,7 +87,7 @@ const Post = ({
               <div class="lg:w-4/5 mx-auto  flex flex-wrap">
                 <img
                   alt="ecommerce"
-                  class="lg:w-1/2 lg:h-fit h-64 object-cover object-center rounded-xl"
+                  class="lg:w-1/2 lg:h-fit h-64 object-cover object-center rounded-xl shadow-lg"
                   src={product.img}
                   id={styles.product_image}
                   
@@ -317,6 +317,14 @@ const Post = ({
                               value={"50gm"}
                             >
                               50gm
+                            </option>
+                          )}
+                          {Object.keys(variants[color]).includes("75gm") && (
+                            <option
+                              class="bg-white hover:bg-black hover:text-black"
+                              value={"75gm"}
+                            >
+                              75gm
                             </option>
                           )}
                           {Object.keys(variants[color]).includes("100gm") && (

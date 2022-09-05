@@ -1,26 +1,246 @@
 import React from 'react'
-
+import GooglePayButton from "@google-pay/button-react";
+import { useState
+ } from 'react';
 const payment = () => {
-  function onGooglePayLoaded(){
-    let googlePayClient = new google.payments.api.PaymentClient(
-      {
-        environment:"TEST",
 
+  const paymentRequest = {
+    apiVersion: 2,
+    apiVersionMinor: 0,
+    allowedPaymentMethods: [
+      {
+        type: "CARD",
+        parameters: {
+          allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+          allowedCardNetworks: ["MASTERCARD", "VISA"]
+        },
+        tokenizationSpecification: {
+          type: "PAYMENT_GATEWAY",
+          parameters: {
+            gateway: "example"
+          }
+        }
       }
-    );
-    googlePayClient.isReadyToPay 
-  }
+    ],
+    merchantInfo: {
+      merchantId: "12345678901234567890",
+      merchantName: "Demo Merchant"
+    },
+    transactionInfo: {
+      totalPriceStatus: "FINAL",
+      totalPriceLabel: "Total",
+      totalPrice: "100.00",
+      currencyCode: "USD",
+      countryCode: "US"
+    }
+  };
+
+  const [buttonColor, setButtonColor] = useState("default");
+  const [buttonType, setButtonType] = useState("buy");
+  const [buttonSizeMode, setButtonSizeMode] = useState("static");
+  const [buttonWidth, setButtonWidth] = useState(240);
+  const [buttonHeight, setButtonHeight] = useState(40);
+
+  const isTop = "window" === "window.top";
+
   return (
-    <div>payment
-      <script src='https://pay.google.com/gp/p/js/pay.js' onload="onGooglePayLoaded()"/>
+    <div>
+      <form className="top-bottom">
+        <label className="control">
+          <span>Button color</span>
+          <select
+            value={buttonColor}
+            onChange={event => setButtonColor(event.target.value)}
+          >
+            <option value="default">default</option>
+            <option value="black">black</option>
+            <option value="white">white</option>
+          </select>
+        </label>
+        <label className="control">
+          <span>Button type</span>
+          <select
+            value={buttonType}
+            onChange={event => setButtonType(event.target.value)}
+          >
+            <option value="buy">buy</option>
+            <option value="plain">plain</option>
+            <option value="donate">donate</option>
+          </select>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            checked={buttonSizeMode === "fill"}
+            onChange={event =>
+              setButtonSizeMode(event.target.checked ? "fill" : "static")
+            }
+          />
+          <span>Custom button size</span>
+        </label>
+        <label className="control">
+          <span>
+            Button width <span className="value">({buttonWidth}px)</span>
+          </span>
+          <input
+            type="range"
+            min="160"
+            max="800"
+            value={buttonWidth}
+            onChange={event => setButtonWidth(Number(event.target.value))}
+            disabled={buttonSizeMode !== "fill"}
+          />
+        </label>
+        <label className="control">
+          <span>
+            Button height <span className="value">({buttonHeight}px)</span>
+          </span>
+          <input
+            type="range"
+            min="40"
+            max="100"
+            value={buttonHeight}
+            onChange={event => setButtonHeight(Number(event.target.value))}
+            disabled={buttonSizeMode !== "fill"}
+          />
+        </label>
+      </form>
+
+      <div className="demo">
+        <GooglePayButton
+          environment="TEST"
+          buttonColor={buttonColor}
+          buttonType={buttonType}
+          buttonSizeMode={buttonSizeMode}
+          paymentRequest={paymentRequest}
+          onLoadPaymentData={paymentRequest => {
+            console.log("load payment data", paymentRequest);
+          }}
+          style={{ width: buttonWidth, height: buttonHeight }}
+        />
+      </div>
+
     </div>
-  )
+  );
+
 }
 
 export default payment
 
+/*   let googlePayClient;
+  const googlePayConfiguration = {
+    apiVersion: 2,
+    apiVersionMinor: 0,
+    allowedPaymentMethods: [
+      {
+        type: "CARD",
+        parameters: {
+          allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+          allowedCardNetworks: ["MASTERCARD", "VISA"]
+        },
+        tokenizationSpecification: {
+          type: "PAYMENT_GATEWAY",
+          parameters: {
+            gateway: "example",
+            gatewayMerchantId:'BCR2DN4T4CWLTD2O'
+          }
+        }
+      }
+    ],
+    
+  }
+
+  const onGooglePayLoaded= ()=>{
+    googlePayClient = new google.payments.api.PaymentsClient({
+      environment: 'TEST',
+
+    })
+
+    googlePayClient.isReadyToPay(googlePayConfiguration)
+    .then(Response => {
+      if(response.result){
+        createAndAddButton();
+      }
+    })
+    .catch(error=>console.error('isReadyToPay error: ',error))
+  }
+
+  const createAndAddButton=()=>{
+    const googlePayButton = googlePayClient.createButton({
+      onClick: onGooglPayButtonClicked,
+    })
+    useEffect(() => {
+
+      if (document) {
+        document.getElementById('buy-now').appendChild(googlePayButton);
+      }
+    
+    }, []);
+  }
+  
+  
+
+  const onGooglPayButtonClicked = ()=>{
+    
+    const paymentDataRequest = {...googlePayConfiguration};
+    paymentDataRequest.merchantInfo = {
+    merchantId:'BCR2DN4T4CWLTD2O',
+    merchantName:'Rohan Khora',
+  }
+
+  paymentDataRequest.transactionInfo = {
+    totalPriceStatus:'FINAL',
+      totalPriceLabel: "Total",
+      totalPrice: subTotal,
+      currencyCode: "INR",
+      countryCode: "IND",
+    }
+
+  googlePayClient.onLoadPaymentData(paymentDataRequest)
+    .then(paymentData => processPaynebtData(paymentData))
+    .catch(error => console.error('loadPaymentData error:', error))
+  }
+
+  const processPaynebtData=(paymentData)=>{
+    fetch(ordersEndpointUrl,{
+      method:'POST',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body: paymentData
+    })
+  }
+  */
 
 /*import React from 'react'
+fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pretransaction`, {
+      method: 'POST', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    let txnToken = await a.json()
+    console.log(txnToken)
+
+    var config = {
+      "root": "",
+      "flow": "DEFAULT",
+      "data": {
+        "orderId": oid, /* update order id 
+        "token": txnToken, /* update token value 
+        "tokenType": "TXN_TOKEN",
+        "amount": subTotal /* update amount 
+      },
+      "handler": {
+        "notifyMerchant": function (eventName, data) {
+          console.log("notifyMerchant handler function called");
+          console.log("eventName => ", eventName);
+          console.log("data => ", data);
+        }
+      }
+    };
+
 
 const payment = ({ cart, addToCart, removeFromCart, subTotal }) => {
   const intiatePayment = async() => {

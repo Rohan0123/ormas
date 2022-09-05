@@ -32,6 +32,13 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@google-pay/button-react@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@google-pay/button-react/-/button-react-3.0.0.tgz#141d89d76a5279ab4a2cc214b1b4f34bae873fc1"
+  integrity sha512-GFRlPrr4rK4iZz1EqsdSDG/gP/UjUAGg+fU3Ar7OacquhCkn2Npr5Bqh7Zyxztx3WzsSYDWA2VPaXIr/JQq0BQ==
+  dependencies:
+    "@types/googlepay" "^0.6.3"
+
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.9.5.tgz"
@@ -156,9 +163,9 @@
   dependencies:
     tslib "^2.4.0"
 
-"@types/googlepay@^0.6.4":
+"@types/googlepay@^0.6.3", "@types/googlepay@^0.6.4":
   version "0.6.4"
-  resolved "https://registry.npmjs.org/@types/googlepay/-/googlepay-0.6.4.tgz"
+  resolved "https://registry.yarnpkg.com/@types/googlepay/-/googlepay-0.6.4.tgz#e0b06ae1f12496c4fa43e52d35e76411dbbee135"
   integrity sha512-PTt/UCllzl8z5HmhymPpSj6uENZvVKZvCBYdDVmbBVJnLStitxtWrterAOQZkKGlqVdzxNXYeif5hOAMNMS5mw==
 
 "@types/json5@^0.0.29":

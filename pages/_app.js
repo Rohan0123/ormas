@@ -138,7 +138,7 @@ function MyApp({ Component, pageProps }) {
     let newCart = {itemCode:{qty: 1, price, name, size, variant}};
     setCart(newCart);
     saveCart(newCart);
-    Router.push("/checkout");
+    router.push("/checkout");
   };
   
   const removeFromCart = (itemCode, qty, price, name, size, variant) => {
