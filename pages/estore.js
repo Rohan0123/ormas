@@ -10,25 +10,25 @@ const ecommerce = ({ products }) => {
   return (
     <div >
 
-      <section class="text-gray-400 bg-black body-font">
-        <div class="container px-5 py-24 mx-auto ">
-          <div class="flex flex-wrap -m-4 w-55 md:ml-52" id={styles.estore_content} >
+      <section className="text-gray-400 bg-black body-font">
+        <div className="container px-5 py-24 mx-auto ">
+          <div className="flex flex-wrap -m-4 w-55 md:ml-52" id={styles.estore_content} >
             {Object.keys(products).map((item) => {
-              return <div class="lg:w-1/5 md:w-1/2 p-4  m-auto  w-650" id={styles.estore_border}>
+              return <div className="lg:w-1/5 md:w-1/2 p-4  m-auto  w-650" id={styles.estore_border}>
                 <Link key={products[item]._id} href={"/product/"+products[item].slug}>
-                  <a class="block relative h-55 overflow-hidden rounded-lg" >
-                    <img alt="ecommerce" class="m-auto block" src={products[item].img} />
+                  <a className="block relative h-55 overflow-hidden rounded-lg" >
+                    <img alt="ecommerce" className="m-auto block" src={products[item].img} />
 
-                    <div class="mt-5 text-center md:text-left">
-                      <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">ORGANIC</h3>
-                      <h2 class="text-white title-font text-lg font-medium">{products[item].title}</h2>
-                      <p class=" text-orange-200 mt-1">₹{products[item].price}</p>
-                      <div class="absolute right-0 bottom-0 mt-1 mr-2 text-white rounded">
-                        {products[item].size.includes('50ml') && <span class='border px-1  border-gray-500 mx-1 rounded'> 50ml </span>}
-                        {products[item].size.includes('100ml') && <span class='border px-1  border-gray-500  mx-1 rounded'> 100ml </span>}
-                        {products[item].size.includes('50gm') && <span class='border px-1  border-gray-500  mx-1 rounded'>50gm</span>}
-                        {products[item].size.includes('100gm') && <span class='border px-1  border-gray-500  mx-1 rounded'>100ml</span>}
-                        {products[item].size.includes('250gm') && <span class='border px-1  border-gray-500  mx-1 rounded'>250ml</span>}
+                    <div className="mt-5 text-center md:text-left">
+                      <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">ORGANIC</h3>
+                      <h2 className="text-white title-font text-lg font-medium">{products[item].title}</h2>
+                      <p className=" text-orange-200 mt-1">₹{products[item].price}</p>
+                      <div className="absolute right-0 bottom-0 mt-1 mr-2 text-white rounded">
+                        {products[item].size.includes('50ml') && <span className='border px-1  border-gray-500 mx-1 rounded'> 50ml </span>}
+                        {products[item].size.includes('100ml') && <span className='border px-1  border-gray-500  mx-1 rounded'> 100ml </span>}
+                        {products[item].size.includes('50gm') && <span className='border px-1  border-gray-500  mx-1 rounded'>50gm</span>}
+                        {products[item].size.includes('100gm') && <span className='border px-1  border-gray-500  mx-1 rounded'>100ml</span>}
+                        {products[item].size.includes('250gm') && <span className='border px-1  border-gray-500  mx-1 rounded'>250ml</span>}
                         </div>
                     </div>
                   </a>

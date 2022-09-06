@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css"
 
 const demography = () => {
   return (
-    <div class={styles.page_title}>demography</div>
+    <div className={styles.page_title}>demography</div>
   )
 }
 

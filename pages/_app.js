@@ -175,8 +175,12 @@ function MyApp({ Component, pageProps }) {
         subTotal={subTotal}
       />
       <Component
+        logout={logout}
+        user={user}
+        key={cart}
         cart={cart}
         addToCart={addToCart}
+        plusToCart={plusToCart}
         buyNow={buyNow}
         removeFromCart={removeFromCart}
         clearCart={clearCart}

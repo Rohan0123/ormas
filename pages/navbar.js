@@ -57,7 +57,7 @@ const Navbar = ({
       <ToastContainer />
       <nav id={styles.mainLogo}>
         <ul>
-          <div class={styles.odisha_logo}>
+          <div className={styles.odisha_logo}>
             <img
               src="/odisha_logo.png"
               width="100px"
@@ -66,7 +66,7 @@ const Navbar = ({
             />
           </div>
 
-          <div class={styles.kolab_logo}>
+          <div className={styles.kolab_logo}>
             <Image
               src="/Kolab_logo.png"
               width="75px"
@@ -75,13 +75,13 @@ const Navbar = ({
             />
           </div>
 
-          <div class={styles.ormas_logo}>
+          <div className={styles.ormas_logo}>
             <a href="www.ormas.org">ORMAS</a>
           </div>
         </ul>
       </nav>
 
-      <nav id={styles.maiNave} class={styles.mainNave}>
+      <nav id={styles.maiNave} className={styles.mainNave}>
         <ul id={styles.nav_ul}>
           <Link href={"/"}>
             <a>
@@ -100,11 +100,11 @@ const Navbar = ({
             </a>
           </Link>
 
-          <li class="drp cursor-pointer">
-            <a href="javascript:void(0)" class="dropbtn text-black">
+          <li className="drp cursor-pointer">
+            <a href="javascript:void(0)" className="dropbtn text-black">
               Notice
             </a>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <Link href={"/advertisement"}>
                 <a href="#">Advertisement</a>
               </Link>
@@ -120,11 +120,11 @@ const Navbar = ({
             </div>
           </li>
 
-          <li class="drp ">
-            <a href="javascript:void(0)" class="dropbtn text-black">
+          <li className="drp ">
+            <a href="javascript:void(0)" className="dropbtn text-black">
               About Us
             </a>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <Link href={"/history"}>
                 <a href="#">History</a>
               </Link>
@@ -142,7 +142,7 @@ const Navbar = ({
         </ul>
 
         <div
-          className="absolute top-28 right-10 flex flex-row text-black mx-2 text-2xl"
+          className="absolute top-28 right-10 flex flex-row text-black mx-2 text-2xl d-none"
           id={styles.nav_buttons}
         >
           <a
@@ -192,45 +192,45 @@ const Navbar = ({
           {!user.value && (
             <Link href={"/login"}>
               <button
-                className="mx-2 text-black font-semibold  text-sm p-1 px-2 rounded-lg"
+                className="mx-2 text-black font-semibold  text-sm p-1 px-2 rounded-lg "
                 id={styles.login_button}
               >
                 LogIn
               </button>
             </Link>
           )}
-          <div onClick={toggleCart} class="hover:cursor-pointer ml-5">
+          <div onClick={toggleCart} className="hover:cursor-pointer ml-5 ">
             <AiOutlineShoppingCart />
           </div>
-          <h2 class=" text-black mx-2 text-lg">{Object.keys(cart).length}</h2>
+          <h2 className=" text-black mx-2 text-lg ">{Object.keys(cart).length}</h2>
         </div>
 
         <div
           ref={ref}
-          class="sideCart top-48 right-0  font-black text-orange-100 bg-black py-10 px-5  transition-transform duration-1000 translate-x-full w-80 "
+          className="sideCart top-48 right-0  font-black text-orange-100 bg-black py-10 px-5  transition-transform duration-1000 translate-x-full w-80 "
           id={styles.sidebar}
         >
-          <h2 class="text-center font-serif text-lg">Shopping cart</h2>
+          <h2 className="text-center font-serif text-lg ">Shopping cart</h2>
           <div>
-            <span class="absolute top-3 right-3 cursor-pointer ">
+            <span className="absolute top-3 right-3 cursor-pointer ">
               <a>
-                <AiFillCloseCircle onClick={remove} class="text-2xl" />
+                <AiFillCloseCircle onClick={remove} className="text-2xl" />
               </a>
             </span>
           </div>
-          <div class="my-5">
-            <ol class="list-decimal px-8">
+          <div className="my-5">
+            <ol className="list-decimal px-8">
               {Object.keys(cart).length === 0 && (
-                <div class="text-center font-semibold">Cart is empty!</div>
+                <div className="text-center font-semibold">Cart is empty!</div>
               )}
               {Object.keys(cart).map((k) => {
                 return (
                   <li key={k}>
-                    <div class="item flex">
-                      <div class="w-3/5 font-semibold ">
+                    <div className="item flex">
+                      <div className="w-3/5 font-semibold ">
                         {cart[k].name} ( {cart[k].size} )
                       </div>
-                      <div class="flex items-center justify-center w-2/5 font-semibold">
+                      <div className="flex items-center justify-center w-2/5 font-semibold">
                         <AiFillMinusCircle
                           onClick={() => {
                             removeFromCart(
@@ -242,7 +242,7 @@ const Navbar = ({
                               cart[k].variant
                             );
                           }}
-                          class="cart_buttons text-2xl hover:cursor-pointer"
+                          className="cart_buttons text-2xl hover:cursor-pointer"
                         />
                         {cart[k].qty}
                         <AiFillPlusCircle
@@ -257,7 +257,7 @@ const Navbar = ({
                               cart[k].availableQty
                             );
                           }}
-                          class="cart_buttons text-2xl hover:cursor-pointer"
+                          className="cart_buttons text-2xl hover:cursor-pointer"
                         />
                       </div>
                     </div>
@@ -266,24 +266,24 @@ const Navbar = ({
               })}
             </ol>
 
-            <h2 class="absolute bottom-32 ml-20 font-bold">
+            <h2 className="absolute bottom-32 ml-20 font-bold">
               SubTotal: ₹{subTotal}
             </h2>
             <Link href={"/checkout"}>
               <button
-                class="flex mx-14 my-3 mt-16 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none hover:bg-orange-100 rounded-lg font-semibold absolute bottom-0 mb-16"
+                className="flex mx-14 my-3 mt-16 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none hover:bg-orange-100 rounded-lg font-semibold absolute bottom-0 mb-16"
                 id={styles.checkout_button}
               >
-                <BsFillBagCheckFill class="my-1 mx-2 " /> Checkout
+                <BsFillBagCheckFill className="my-1 mx-2 " /> Checkout
               </button>
             </Link>
 
             <button
               onClick={clearCart}
-              class="flex mx-14 my-3 mt-16 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none hover:bg-orange-100 rounded-lg font-semibold absolute bottom-0"
+              className="flex mx-14 my-3 mt-16 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none hover:bg-orange-100 rounded-lg font-semibold absolute bottom-0"
               id={styles.checkout_button}
             >
-              <MdDeleteForever class="my-1 mx-2 " /> Clear Cart
+              <MdDeleteForever className="my-1 mx-2 " /> Clear Cart
             </button>
           </div>
         </div>

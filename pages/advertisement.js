@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css"
 
 const advertisement = () => {
   return (
-    <div class={styles.page_title}>advertisement</div>
+    <div className={styles.page_title}>advertisement</div>
   )
 }
 

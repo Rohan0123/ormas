@@ -11,10 +11,10 @@ export default async function handler(req, res) {
 
         paytmParams.body = {
             "requestType": "Payment",
-            "mid": "YOUR_MID_HERE",
+            "mid": process.env.NEXT_PUBLIC_PAYTM_MID,
             "websiteName": "YOUR_WEBSITE_NAME",
             "orderId": req.body.oid,
-            "callbackUrl": "http://localhost:3000/api/posttransaction",
+            "callbackUrl": `${process.env.NEXT_PUBLIC_HOST}/api/posttransaction`,
             "txnAmount": {
                 "value": req.body.subTotal,
                 "currency": "INR",
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
         };
 
 
-        const checksum = await PaytmChecksum.generateSignature(JSON.stringify(paytmParams.body), "{YOUR_MERCHANT_KEY}")
+        const checksum = await PaytmChecksum.generateSignature(JSON.stringify(paytmParams.body), process.env.NEXT_PUBLIC_PAYTM_MKEY)
 
             paytmParams.head = {
                 "signature": checksum
@@ -44,7 +44,7 @@ export default async function handler(req, res) {
                         hostname: 'securegw.paytm.in',
         
                         port: 443,
-                        path: '/theia/api/v1/initiateTransaction?mid={YOUR_MID_HERE}&orderId=ORDERID_98765',
+                        path: `/theia/api/v1/initiateTransaction?mid=${process.env.NEXT_PUBLIC_PAYTM_MID}&orderId=${req.body.oid}`,
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ export default async function handler(req, res) {
         
                         post_res.on('end', function () {
                             console.log('Response: ', response);
-                            resolve(response)
+                            resolve(JSON.parse(response).body)
                         });
                     });
         
@@ -74,6 +74,7 @@ export default async function handler(req, res) {
             
             let myr = await requestAsync()
             res.status(200).json(myr)
+            return(hi)
         
     }
 }
