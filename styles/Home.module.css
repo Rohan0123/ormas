@@ -569,6 +569,17 @@
   border-color: #000;
 }
 
+#checkout_button:disabled{
+  background-color: gray;
+  color: black;
+  border: 1px solid white;
+}
+
+#checkout_button:disabled:hover {
+  background-color: gray;
+  border: 1px solid white;
+}
+
 #navbar
 {
   position: sticky;
@@ -777,4 +788,6 @@
     margin-top: 40px;
   }
 }
+
+
 

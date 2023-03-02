@@ -14,6 +14,7 @@ const checkout = ({ cart, plusToCart, removeFromCart, subTotal }) => {
   const [pincode, setPincode] = useState()
   const [address, setAddress] = useState()
   const [first, setfirst] = useState()
+  const [disabled, setDisabled] = useState(true)
 
   const handleChange = (e)=>{
     if(e.target.name == 'name'){
@@ -25,11 +26,17 @@ const checkout = ({ cart, plusToCart, removeFromCart, subTotal }) => {
     else if(e.target.name == 'phone'){
       setPhone(e.target.value)
     }
-    else if(e.target.name == 'pincode'){
+    else if(e.target.name == 'pin'){
       setPincode(e.target.value)
     }
     else if(e.target.name == 'address'){
       setAddress(e.target.value)
+    }
+    if (name && email && address && phone && pin ){
+      setDisabled(false)
+    }
+    else{
+      setDisabled(true)
     }
   }
 
@@ -37,7 +44,7 @@ const checkout = ({ cart, plusToCart, removeFromCart, subTotal }) => {
   const intiatePayment = async () => {
     console.log("working");
     let oid = Math.floor(Math.random() * Date.now());
-    const data = { cart, subTotal, oid, email: "email" };
+    const data = { cart, subTotal, oid, email: "email",name, address, pincode, phone };
     let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pretransaction`, {
       method: "POST", // or 'PUT'
       headers: {
@@ -118,6 +125,7 @@ const checkout = ({ cart, plusToCart, removeFromCart, subTotal }) => {
               className="relative justify-center"
               id={styles.checkout_details}
             >
+              
               <label
                 htmlFor="name"
                 className="leading-7 text-sm text-black font-semibold"
@@ -162,9 +170,10 @@ const checkout = ({ cart, plusToCart, removeFromCart, subTotal }) => {
                 Address
               </label>
               <textarea
+                onChange={handleChange}
                 value={address}
-                id="message"
-                name="message"
+                id="address"
+                name="address"
                 className="w-full bg-orange-200 border-1 border-black  bg-opacity-50 rounded border focus:border-orange-200 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               ></textarea>
             </div>
@@ -179,6 +188,7 @@ const checkout = ({ cart, plusToCart, removeFromCart, subTotal }) => {
               Phone no.:
             </label>
             <input
+              onChange={handleChange}
               type="text"
               maxLength={10}
               id="phone"
@@ -290,15 +300,15 @@ const checkout = ({ cart, plusToCart, removeFromCart, subTotal }) => {
         </div>
 
         <button
-          disabled={true}
-          className="disabled:bg-gray-600 flex my-5 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none  rounded-lg font-semibold "
+          disabled={disabled}
+          className="flex my-5 bg-black border-0 py-2 px-8 focus:outline-none  rounded-lg font-semibold "
           id={styles.checkout_button}
           onClick={intiatePayment}
         >
           Pay ₹{subTotal}
         </button>
 
-        <div className="w-40 flex my-5 text-orange-200 bg-black border-0 py-2 px-8 focus:outline-none  rounded-lg font-semibold ">
+        <div className="w-40 my-5 bg-black border-0 py-2 px-8 focus:outline-none  rounded-lg font-semibold hidden">
           <GooglePayButton
             environment="TEST"
             buttonColor={buttonColor}

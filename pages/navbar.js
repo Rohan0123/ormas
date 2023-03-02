@@ -266,7 +266,7 @@ const Navbar = ({
               })}
             </ol>
 
-            <h2 className="absolute bottom-32 ml-20 font-bold">
+            <h2 className="absolute bottom-32 ml-24 font-bold">
               SubTotal: ₹{subTotal}
             </h2>
             <Link href={"/checkout"}>

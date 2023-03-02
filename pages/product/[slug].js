@@ -87,7 +87,7 @@ const Post = ({
               <div className="lg:w-4/5 mx-auto  flex flex-wrap">
                 <img
                   alt="ecommerce"
-                  className="lg:w-1/2 lg:h-fit h-64 object-cover object-center rounded-xl shadow-lg"
+                  className="lg:w-2/5 lg:h-fit h-64 object-cover object-center rounded-xl shadow-lg"
                   src={product.img}
                   id={styles.product_image}
                   

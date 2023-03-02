@@ -15,11 +15,11 @@ const order = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
                                 <a className="flex-grow border-b-2 border-gray-800 py-2 text-lg pl-56">Size</a>
                                 <a className="flex-grow border-b-2 border-gray-800 py-2 pl-48 text-lg ">Quantity</a>
                             </div>
-                            <p className="leading-relaxed mb-4 text-orange-100 font-semibold">Your order has been successfully placed. </p>
+                            <p className="leading-relaxed mb-4 text-black font-semibold">Your order has been successfully placed. </p>
                             
                             <div className="flex border-t border-b mb-6 border-gray-800 py-2">
                                 <span className="text-white">Product</span>
-                                <span className="ml-auto text-white">50ml</span>
+                                <span className="ml-auto text-white">50ml</span> 
                                 <span className="ml-auto text-white">6</span>
                             </div>
                             
