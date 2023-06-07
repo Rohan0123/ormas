@@ -72,7 +72,7 @@ function MyApp({ Component, pageProps }) {
   const addToCart = (itemCode, qty, price, name, size, variant, availableQty) => {
     let newCart = cart;
     if (itemCode in cart) {
-      toast('This item already exists in your cart!', {
+      toast('This product already exists in your cart!', {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -83,6 +83,15 @@ function MyApp({ Component, pageProps }) {
         });
     } else {
       newCart[itemCode] = { qty: 1, price, name, size, variant, availableQty };
+      toast('Product added to your cart!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
     }
     setCart(newCart);
     saveCart(newCart);

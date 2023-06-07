@@ -13,7 +13,7 @@ const footer = () => {
               src="/Kolab_logo.png"
               width="75px"
               height="85px"
-              
+              alt="logo"
             />
                 
               <span className="ml-5 text-2xl font-bold font-sans">Kolab</span>

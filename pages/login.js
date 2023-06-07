@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Router from "next/router";
 import { useEffect } from "react";
 
-const login = () => {
+const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   useEffect(() => {
@@ -172,7 +172,7 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
 
 /*
 

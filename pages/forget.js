@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import Router from 'next/router';
 
-const forget = () => {
+const Forget = () => {
   useEffect(() => {
     if(localStorage.getItem('token')){
       Router.push('/')
@@ -85,4 +85,4 @@ const forget = () => {
   )
 }
 
-export default forget
+export default Forget

@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from "../styles/Home.module.css"
+import Image from 'next/image'
+
 
 const order = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
     return (
@@ -29,14 +31,14 @@ const order = ({cart, addToCart, removeFromCart, clearCart, subTotal}) => {
                                 <span className="ml-auto text-white">6</span>
                             </div>
                             <div className="flex flex-col">
-                                <div className="title-font font-medium text-2xl text-orange-200">SubTotal: ₹{subTotal}</div>
+                                <div className="title-font font-medium text-2xl text-black">SubTotal: ₹{subTotal}</div>
                                 <div>
                                 <button className="flex mt-5 text-black bg-orange-200 border-0 py-2 px-6 focus:outline-none hover:bg-orange-100 rounded font-semibold">Track order</button>
                                 </div>
                                 
                             </div>
                         </div>
-                        <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400"/>
+                        <Image alt="order" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="/dummy.webp" width="500px" height="500px"/>
                     </div>
                 </div>
             </section>

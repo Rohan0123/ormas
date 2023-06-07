@@ -4,6 +4,7 @@ import { useState } from 'react'
 import styles from "/styles/home.module.css"
 import Link from "next/link"
 import { AiOutlineShoppingCart } from "react-icons/ai"
+import Image from 'next/image'
 
 const Post = ({addToCart}) => {
 
@@ -32,7 +33,7 @@ const Post = ({addToCart}) => {
         <section className="text-gray-400 bg-black body-font overflow-hidden" id={styles.details}>
           <div className="container px-5 py-16 mx-auto">
             <div className="lg:w-4/5 mx-auto flex flex-wrap">
-              <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-xl" src="/Lemon_Grass_Oil.jpeg" />
+              <Image alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded-xl" src="/Lemon_Grass_Oil.jpeg" /> {/* Image tag */}
               <div className="lg:w-1/2 lg:pl-10 lg:py-6 mt-6 lg:mt-0 " >
                 <h2 className="text-sm title-font text-gray-500 tracking-widest">ORMAS</h2>
                 <h1 className="text-white text-3xl title-font font-medium mb-1">Lemon Grass Oil</h1>

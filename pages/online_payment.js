@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 import GooglePayButton from "@google-pay/button-react";
 import { useState } from 'react';
 
-const online_payment = () => {
+const Online_payment = () => {
   
     const paymentRequest = {
     apiVersion: 2,
@@ -68,4 +68,4 @@ const online_payment = () => {
   )
 }
 
-export default online_payment
+export default Online_payment

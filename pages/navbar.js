@@ -58,12 +58,13 @@ const Navbar = ({
       <nav id={styles.mainLogo}>
         <ul>
           <div className={styles.odisha_logo}>
-            <img
+            <Image
               src="/odisha_logo.png"
               width="100px"
               height="90px"
               id={styles.mainLogo_image}
-            />
+              alt="OdishaLogo"
+            /> {/* Image */}
           </div>
 
           <div className={styles.kolab_logo}>
@@ -72,11 +73,12 @@ const Navbar = ({
               width="75px"
               height="90px"
               id={styles.mainLogo_image}
+              alt="KolabLogo"
             />
           </div>
 
           <div className={styles.ormas_logo}>
-            <a href="www.ormas.org">ORMAS</a>
+            <a href="//www.ormas.org">ORMAS</a>
           </div>
         </ul>
       </nav>
@@ -170,7 +172,7 @@ const Navbar = ({
                     </div>
                   </li>
                   </Link>
-                  <Link href={"/orders"}><li className="py-2 hover:font-bold hover cursor-pointer mt-1.5">
+                  <Link href={"/order"}><li className="py-2 hover:font-bold hover cursor-pointer mt-1.5">
                     <div className="flex flex-row">
                       <SiHackthebox className="text-lg mr-1" />
                       Orders

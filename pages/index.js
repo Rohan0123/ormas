@@ -13,13 +13,13 @@ export default function Home({ products }) {
   return (
     <div >
       <section className="text-gray-400 bg-white body-font">
-        <div className="container px-5 py-16 mx-auto ">
+        <div className="container px-5 py-10 mx-auto ">
           <div className="flex justify-center flex-wrap m-3 w-55 md:ml-52 -mt-5" id={styles.estore_content} >
             {Object.keys(products).map((item) => {
-              return <div className="lg:w-1/5 md:w-1/2 p-4  m-auto  w-650" id={styles.estore_border}>
+              return <div className="lg:w-1/5 md:w-1/2 p-4  m-auto  w-650" id={styles.estore_border} key={products[item]._id}>
                 <Link key={products[item]._id} href={"/product/"+products[item].slug}>
                   <a className="block relative h-55 overflow-hidden rounded-lg" >
-                    <img alt="ecommerce" className="m-auto block" src={products[item].img} id={styles.estore_product}/>
+                  <Image alt="ecommerce" className="m-auto block" src={products[item].img} id={styles.estore_product} width="280px" height="340px"/>             {/* Image */}
 
                     <div className="mt-5 text-center md:text-left">
                       <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">ORGANIC</h3>

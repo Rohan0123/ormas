@@ -2,7 +2,7 @@ import React from 'react'
 import GooglePayButton from "@google-pay/button-react";
 import { useState
  } from 'react';
-const payment = () => {
+const Payment = () => {
 
   const paymentRequest = {
     apiVersion: 2,
@@ -125,7 +125,7 @@ const payment = () => {
 
 }
 
-export default payment
+export default Payment
 
 /*   let googlePayClient;
   const googlePayConfiguration = {

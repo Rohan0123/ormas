@@ -8,6 +8,7 @@ import mongoose from "mongoose";
 import Product from "../../models/Product";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Image from "next/image";
 
 const Post = ({
   addToCart,
@@ -85,13 +86,14 @@ const Post = ({
             
             <div className="container px-7 my-7 mx-auto">
               <div className="lg:w-4/5 mx-auto  flex flex-wrap">
-                <img
+                <Image
                   alt="ecommerce"
                   className="lg:w-2/5 lg:h-fit h-64 object-cover object-center rounded-xl shadow-lg"
                   src={product.img}
                   id={styles.product_image}
-                  
-                />
+                  width="400px"
+                  height="550px"
+                />                                                                                        {/* Image tag */}
                 <div className="lg:w-1/2 lg:pl-10 lg:py-6 mt-6 lg:mt-0 ">
                   <h2 className="text-sm title-font text-gray-500 tracking-widest">
                     ORMAS

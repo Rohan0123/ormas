@@ -2,13 +2,13 @@ import react from "react";
 import { useRouter } from "next/dist/client/router";
 import { useEffect } from "react";
 
-const myaccount = () => {
+const MyAccount = () => {
     const router = useRouter();
   useEffect(() => {
     if(!localStorage.getItem("token")){
         router.push('/');
     }
-  }, [router.query]);
+  },[router]);              {/* router.query */}
 
   return (
     <div>
@@ -20,4 +20,4 @@ const myaccount = () => {
   );
 };
 
-export default myaccount;
+export default MyAccount;

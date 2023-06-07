@@ -7,7 +7,7 @@ import Script from "next/script";
 import GooglePayButton from "@google-pay/button-react";
 import { useState } from "react";
 import { useEffect } from "react";
-const checkout = ({ cart, plusToCart, removeFromCart, subTotal }) => {
+const Checkout = ({ cart, plusToCart, removeFromCart, subTotal }) => {
   const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [phone, setPhone] = useState()
@@ -366,4 +366,4 @@ const checkout = ({ cart, plusToCart, removeFromCart, subTotal }) => {
   );
 };
 
-export default checkout;
+export default Checkout;
