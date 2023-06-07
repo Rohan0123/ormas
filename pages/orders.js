@@ -10,7 +10,7 @@ const Orders = (user) => {
     if(!localStorage.getItem("token")){
         router.push('/');
     }
-  }, []);                           {/* router */}
+  }, [router]);                           {/* router */}
 
   return (
     <div className="mx-40">
