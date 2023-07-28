@@ -22,7 +22,7 @@ import { useRef } from "react";
 import { useState } from "react";
 
 const Navbar = ({
-  
+
   logout,
   user,
   cart,
@@ -50,7 +50,7 @@ const Navbar = ({
   };
 
   const [dropdown, setDropdown] = useState(false);
-  
+
   console.log({ cart, user });
   return (
     <div>
@@ -159,18 +159,18 @@ const Navbar = ({
               <div onMouseOver={() => {
                 setDropdown(true);
               }}
-              onMouseLeave={() => {
-                setDropdown(false);
-              }}
-              className="absolute top-6 right-20 bg-orange-100 text-sm h-36 w-36 rounded-md px-5 border border-black z-10">
+                onMouseLeave={() => {
+                  setDropdown(false);
+                }}
+                className="absolute top-6 right-20 bg-orange-100 text-sm h-36 w-36 rounded-md px-5 border border-black z-10">
                 <ol>
                   <Link href={"./myaccount"}>
                     <li className="py-2 hover:font-bold hover cursor-pointer mt-1.5">
-                    <div className="flex flex-row">
-                      <MdOutlineAccountCircle className="text-lg mr-1" />
-                      My Account
-                    </div>
-                  </li>
+                      <div className="flex flex-row">
+                        <MdOutlineAccountCircle className="text-lg mr-1" />
+                        My Account
+                      </div>
+                    </li>
                   </Link>
                   <Link href={"/order"}><li className="py-2 hover:font-bold hover cursor-pointer mt-1.5">
                     <div className="flex flex-row">
@@ -187,8 +187,8 @@ const Navbar = ({
                 </ol>
               </div>
             )}
-          {user.value &&<div><MdAccountCircle /></div> }
-          
+            {user.value && <div><MdAccountCircle /></div>}
+
           </a>
 
           {!user.value && (

@@ -29,8 +29,9 @@ export default function Home({ products }) {
                         {products[item].size.includes('50ml') && <span className='border px-1  border-gray-500 mx-1 rounded'> 50ml </span>}
                         {products[item].size.includes('100ml') && <span className='border px-1  border-gray-500  mx-1 rounded'> 100ml </span>}
                         {products[item].size.includes('50gm') && <span className='border px-1  border-gray-500  mx-1 rounded'>50gm</span>}
-                        {products[item].size.includes('100gm') && <span className='border px-1  border-gray-500  mx-1 rounded'>100ml</span>}
-                        {products[item].size.includes('250gm') && <span className='border px-1  border-gray-500  mx-1 rounded'>250ml</span>}
+                        {products[item].size.includes('100gm') && <span className='border px-1  border-gray-500  mx-1 rounded'>100gm</span>}
+                        {products[item].size.includes('250gm') && <span className='border px-1  border-gray-500  mx-1 rounded'>250gm</span>}
+                        {products[item].size.includes('500gm') && <span className='border px-1  border-gray-500  mx-1 rounded'>500gm</span>}
                         </div>
                     </div>
                   </a>

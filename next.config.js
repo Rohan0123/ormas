@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
-const env = {
-  customKey: 'my-value',
-}
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
-}
+  swcMinify: true
+};
 
-module.exports = { nextConfig,env }
+const env = {
+  customKey: 'my-value'
+};
+
+module.exports = {
+  nextConfig,
+  env
+};
